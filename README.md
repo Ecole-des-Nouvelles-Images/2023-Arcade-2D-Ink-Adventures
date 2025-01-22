@@ -1,22 +1,85 @@
-<h1>Chroma</h1>
-Introducing Chroma, a 2D platformer-puzzle game largely inspired by *Inside*. Dive into the dark streets of a fading city, discover its inhabitants, use your light to navigate and open paths, progress, and retrieve the lost light of the town.<br><br/>
+<h1 align="center">
+    <a href="https://github.com/Ecole-des-Nouvelles-Images/2024-Mobile-Clawster/blob/main/README.fr.md">
+    <img src="https://github.com/user-attachments/assets/41b66b00-1f67-4793-bd92-24e4f4613b26" width="60" height="40">
+  </a>
+  <a href="https://github.com/Ecole-des-Nouvelles-Images/2024-Mobile-Clawster/blob/main/README.md">
+    <img src="https://github.com/user-attachments/assets/8724f8b2-1eeb-402b-9584-50f07269331b" width="60" height="40">
+  </a>
+</h1>
 
-<h2>The Team</h2>
-This game was developed by a four-person crew as part of a project during our second year at L'École des Nouvelles Images.<br><br/>
+<h1 align="center">
+    <img src="https://github.com/user-attachments/assets/7297836c-85f9-4cbb-a341-8e219245c602">
+  </a>
 
-- <b>Giulia Perruca</b>, game artist. This project was their original idea.
-- <b>Cyrielle Eschalier</b>, game artist.
-- <b><a href="https://github.com/NoahMil" target="_blank">Noah Milliani</a></b>, game developer.
-- <b><a href="https://github.com/Elias-Pr" target="_blank">Elias Prévost</a></b>, game developer.
+<h2 align="center">
+  <strong>Summary</strong>
+</h2>
 
-<h2>Main Game Course</h2>
-In this game, you control Chroma, the little lightbringer. You'll first need to collect all your colors to progress through the city. Unlocking all of them will provide you with new mixed colors that you will need to interact with or avoid certain objects during your adventure.<br><br/>
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#équipe">Team</a></li>
+    <li><a href="#pitch">Pitch</a></li>
+    <li><a href="#univers">Universe</a></li>
+  </ol>
+</details>
 
-<h4>Starting the game</h4>
-The first thing you'll need to do is dress up! As Chroma is a truly open-minded fashion fan, take the liberty to introduce him to your tastes. Change his clothes, but most of all, pick the best hat! <br><br/>
+<h2 id="introduction" align="center">
+  <strong>Introduction</strong>  
+</h2>
+<p>
+  <strong>Chroma</strong> is a <strong>platformer game</strong>, created during a period spanning from November 27 to December 22, 2024, during our 2nd year in the Video Games & Real-Time Rendering department of the <a href="https://github.com/Ecole-des-Nouvelles-Images">Ecole des Nouvelles Images</a>. Dive into the dark streets of a fading city, discover its inhabitants, use your light to navigate and open paths, progress, and retrieve the lost light of the town !
+</p>
 
-<h4>On to the adventure now</h4>
-Once you've selected your best Sunday outfit, the next step is to get out of the house and explore the world. The first task will be to retrieve all the colors that will help you progress through the city: red, green, and blue. 
-Acquiring all of them will be key to solving various platform puzzles. Learn to change your color to match the objects you want to interact with while avoiding the colors of objects that might block your way.
-<h2>Recommendations</h2>
-We highly recommend playing with a controller for this game. We also advise you to take your time to learn the mechanics, understanding which colors interact with which objects and which don’t. Keep in mind it's a puzzle game, so some situations might require a bit of reflection and timing!
+<h2 id="équipe" align="center">
+  <strong>Équipe</strong>
+</h2>
+<ul>
+  <li>
+    <a href="https://github.com/GiuliaHP">Giulia HAUT PERUCCA</a> – <strong>Product Owner</strong> & <strong>2D/UI Game Artist</strong>
+  </li>
+  <li>
+    <a href="https://github.com/Cyrielle-E">Cyrielle ESCHALIER</a> – <strong>2D Game Artist</strong>
+  </li>
+  <li>
+    <a href="https://github.com/Elias-Pr">Elias PREVOST</a> – <strong>Architecture Developer</strong>
+  </li>
+    <li>
+    <a href="https://github.com/NoahMil">Noah MILIANI</a> – <strong>Gameplay Developer</strong>
+  </li>
+</ul>
+
+<div align="center">
+  <a href="https://github.com/GiuliaHP">
+    <img src="https://github.com/user-attachments/assets/050c3a0a-4467-45a6-847c-85183913477b" width="200px" alt="avatar giulia-rond">
+  </a>
+  <a href="https://github.com/Cyrielle-E">
+    <img src="https://github.com/user-attachments/assets/9fafa3b0-4c0f-4500-b69a-04f4f2f2b274" width="200px" alt="avatar cyrielle-rond">
+  </a>
+  <a href="https://github.com/Elias-Pr">
+    <img src="https://github.com/user-attachments/assets/38b85d7b-1b7f-4da7-936e-67a355151745" width="200px" alt="avatar elias-rond">
+  </a>
+  <a href="https://github.com/NoahMil">
+    <img src="https://github.com/user-attachments/assets/2a66cfb4-db97-4eb6-b8aa-197e4ca7ca6a" width="200px" alt="avatar noah-rond">
+  </a>
+</div>
+
+
+<h2 id="pitch" align="center">
+  <strong>Pitch</strong>  
+</h2>
+<p>
+ <strong>Chroma</strong> is a <strong>2D singleplayer platformer-puzzle game</strong>, playable on PC with a keyboard or a console controller. The player takes on the role of <strong>Chroma, the little lightbringer</strong>. By <strong>collecting colors through the city<strong>, the player will be able to <strong>use and mix colors</strong> in order to <strong>interact with or avoid certain objects</strong> during their adventure.
+</p>
+
+<h2 id="univers" align="center">
+  <strong>Universe</strong>
+</h2>
+<p>
+  In a city swallowed by shadows and silence, a <strong>small spark of light</strong> emerges to <strong>challenge the encroaching darkness</strong>. Once alive with vibrant colors, the city now stands as a monochrome echo of its former self, its hues <strong>scattered and lost</strong>. <strong>This light</strong>, known as <strong>Chroma</strong>, carries the power to reclaim the city's essence. With every color retrieved—<strong>red, green, and blue</strong>—the world begins to breathe once more, <strong>unlocking paths and unveiling secrets hidden in the gloom</strong>. The interplay of colors <strong>reveals both opportunities and threats</strong>, shaping the journey through the city's desolate streets. As the light grows, so does the hope for <strong>a world reborn in brilliance</strong>. The fate of the city lies in the balance of color and shadow.
+</p>
+
+<h1 align="center">
+    <img src="https://github.com/user-attachments/assets/af7f8ac8-7127-4e3d-bb12-863378897002">
+  </a>
