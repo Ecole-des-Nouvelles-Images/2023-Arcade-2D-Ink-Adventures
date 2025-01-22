@@ -12,7 +12,7 @@
   </a>
 
 <h2 align="center">
-  <strong>Résumé</strong>
+  <strong>Sommaire</strong>
 </h2>
 
 <details>
