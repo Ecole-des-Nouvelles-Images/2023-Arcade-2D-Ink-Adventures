@@ -19,7 +19,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#équipe">Team</a></li>
+    <li><a href="#team">Team</a></li>
     <li><a href="#pitch">Pitch</a></li>
     <li><a href="#univers">Universe</a></li>
   </ol>
