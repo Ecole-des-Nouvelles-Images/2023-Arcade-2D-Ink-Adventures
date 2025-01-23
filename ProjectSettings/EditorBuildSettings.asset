@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PROD/Scenes/MainMenuFINAL.unity
+    path: Assets/Scenes/MainMenuFINAL.unity
     guid: 5e2068e2ef180c84199005a57748318d
   - enabled: 1
-    path: Assets/PROD/Scenes/PersistentGameplayFINAL.unity
+    path: Assets/Scenes/PersistentGameplayFINAL.unity
     guid: ccfa9d17c7115c5418e9949c55564bfd
   - enabled: 1
-    path: Assets/PROD/Scenes/Niveau1Final.unity
+    path: Assets/Scenes/Niveau1Final.unity
     guid: c7f57768ec238af428ae31c69fa6e4a0
   - enabled: 1
-    path: Assets/PROD/Scenes/Niveau2Final.unity
+    path: Assets/Scenes/Niveau2Final.unity
     guid: 7f60b1921ca7922428a49d7ea7f2b323
   - enabled: 1
-    path: Assets/PROD/Scenes/Niveau3Final.unity
+    path: Assets/Scenes/Niveau3Final.unity
     guid: 1690ff27ece3c034eaa870cc076e3c84
   - enabled: 1
-    path: Assets/PROD/Scenes/EndingScene.unity
+    path: Assets/Scenes/EndingScene.unity
     guid: b6d9ed3a258e0a647bc491c11dc53e6c
   m_configObjects: {}

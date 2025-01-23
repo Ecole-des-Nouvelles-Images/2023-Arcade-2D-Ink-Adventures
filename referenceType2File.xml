@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>2a4f173db50b20a4f9417b6cdc3f9112</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>3a8fc86b17451704ba74e5c8239bf729</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d19b954a4576a5544a60a7977102de96</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>8720eab56095c9249921868d5007000f</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/CollectionData.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d0d53c08b6db30b4ca65f11894d45113</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>5b2215a7e84f0264ab4030c746e0b863</guid>
+    <fileName>Assets/Plugins/UnitySweeper/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2024-06-01T15:39:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>704aaed94d9335446a6652f4537387a1</guid>
+    <fileName>Assets/Giulia/Scripts/OpenLink.cs</fileName>
+    <timeStamp>2025-01-23T14:24:42.0491594+01:00</timeStamp>
+    <typeFullName>
+      <string>OpenLink</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>16cd5615f475b784ebaf588a1aa1e19f</guid>
+    <fileName>Assets/Giulia/Scripts/ParallaxScript.cs</fileName>
+    <timeStamp>2025-01-23T14:24:42.0491594+01:00</timeStamp>
+    <typeFullName>
+      <string>ParallaxScript</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9cf3fb7372584e944854b97d98c9f46d</guid>
+    <fileName>Assets/Giulia/Scripts/TrailColor.cs</fileName>
+    <timeStamp>2025-01-23T14:24:42.0491594+01:00</timeStamp>
+    <typeFullName>
+      <string>TrailColor</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6d8440aa755c5ef4fa18253795b04bf9</guid>
+    <fileName>Assets/Noah/Scripts/Ladder.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.322321+01:00</timeStamp>
+    <typeFullName>
+      <string>Ladder</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5d4db4a61e6718449a74c2605f592fce</guid>
+    <fileName>Assets/Noah/Scripts/MovingObstacle.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3243142+01:00</timeStamp>
+    <typeFullName>
+      <string>MovingObstacle</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>50703b5fe5ef76641883936bd2cca189</guid>
+    <fileName>Assets/Noah/Scripts/Tags.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3273042+01:00</timeStamp>
+    <typeFullName>
+      <string>Tags</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e83e751d50bf9c4438d80a07c499626d</guid>
+    <fileName>Assets/PROD/Scripts/Ending.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.4219917+01:00</timeStamp>
+    <typeFullName>
+      <string>Ending</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f3331939d41f865479fb2bc630cdf900</guid>
+    <fileName>Assets/Scripts/Components/PlayerColor.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3796411+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Components.PlayerColor</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5b121cee5a1563a41bbdbb3fcce0564d</guid>
+    <fileName>Assets/Scripts/Components/PlayerController.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3796411+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Components.PlayerController</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>bd8f5b5067de8b144b59dc9c8c7af4e1</guid>
+    <fileName>Assets/Scripts/Components/PropBehavior.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3806385+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Components.PropBehavior</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b395dcf76643601428f707bf4e802131</guid>
+    <fileName>Assets/Scripts/Components/TriggerForestSound.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3806385+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Components.TriggerForestSound</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5987f480a3af30a4c85f800dcbca8f6b</guid>
+    <fileName>Assets/Scripts/Core/MonoBehaviourSingleton.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3813131+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Core.MonoBehaviourSingleton`1</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6312e4e5c34344daa1dd50a9b39a045c</guid>
+    <fileName>Assets/Scripts/Helper/ColorHelpers.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3813131+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Helper.ColorHelpers</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>605227fe096249e28cf13ad1a1d062f2</guid>
+    <fileName>Assets/Scripts/Helper/InputHelpers.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3813131+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Helper.InputHelpers</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5ae224f1fd0ea9946bd51d9b8efb18d5</guid>
+    <fileName>Assets/Scripts/Ladder/Ladder.cs</fileName>
+    <timeStamp>2025-01-23T14:24:41.6072341+01:00</timeStamp>
+    <typeFullName>
+      <string>Ladder</string>
+      <string>Elias.Scripts.Ladder.Ladder</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d565bfec4c8857a49ab00f88ece7338a</guid>
+    <fileName>Assets/Scripts/Managers/GameManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3823478+01:00</timeStamp>
+    <typeFullName>
+      <string>Elias.Scripts.Managers.GameManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3d0dcad8c4345af49a99679df5020808</guid>
+    <fileName>Assets/Noah/Scripts/Camera/CameraControlTrigger.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3183381+01:00</timeStamp>
+    <typeFullName>
+      <string>CameraControlTrigger</string>
+      <string>CustomInspectorObjects</string>
+      <string>PanDirection</string>
+      <string>MyScriptEditor</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d6d8e62923155bc4cbbdd6c56c6dad5f</guid>
+    <fileName>Assets/Noah/Scripts/Camera/CameraFollowObject.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3183381+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Camera.CameraFollowObject</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>30df8034610c7ff4d94451ae6e26a77f</guid>
+    <fileName>Assets/Noah/Scripts/Camera/CameraManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.319331+01:00</timeStamp>
+    <typeFullName>
+      <string>CameraManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>fa15e74441951ae49b07387aefd3f84d</guid>
+    <fileName>Assets/Noah/Scripts/CharacterCustomization/OutfitChanger.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.319331+01:00</timeStamp>
+    <typeFullName>
+      <string>OutfitChanger</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>71ba96e4de6b0714c8c0969c73ba7c8d</guid>
+    <fileName>Assets/Noah/Scripts/Checkpoint/Checkpoint.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.319331+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Checkpoint.Checkpoint</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3ffa986d85b95bc47aebfc73aa0e9b06</guid>
+    <fileName>Assets/Noah/Scripts/Data/ChildObject.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.8426332+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Data.ChildObject</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>646d13a1fa405ed45a8f1b276e380a45</guid>
+    <fileName>Assets/Noah/Scripts/Input/InputManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3213244+01:00</timeStamp>
+    <typeFullName>
+      <string>InputManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>91945d9e69142954fa4704947e479012</guid>
+    <fileName>Assets/Noah/Scripts/Input/ResetDeviceBindings.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3213244+01:00</timeStamp>
+    <typeFullName>
+      <string>ResetDeviceBindings</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5dae5b999f1d8fa4baee7d0c8e0ca7a0</guid>
+    <fileName>Assets/Noah/Scripts/Interactor/Interactor.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.8426332+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Interactor.Interactor</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>917eeed9340a7cf4c932391cc57bb412</guid>
+    <fileName>Assets/Noah/Scripts/Ladder/Ladder.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.8436299+01:00</timeStamp>
+    <typeFullName>
+      <string>Ladder</string>
+      <string>Noah.Scripts.Ladder.Ladder</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a5886cbf77a1c0f498987d75634fa00a</guid>
+    <fileName>Assets/Noah/Scripts/Menu/CustomizeMenuManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3233177+01:00</timeStamp>
+    <typeFullName>
+      <string>CustomizeMenuManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8fd8fe9fa2c6c1f46a4f673f0145e061</guid>
+    <fileName>Assets/Noah/Scripts/Menu/MainMenuManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3233177+01:00</timeStamp>
+    <typeFullName>
+      <string>MainMenuManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e339ff4ce44ebfc44ab85c7895e69945</guid>
+    <fileName>Assets/Noah/Scripts/Menu/MenuManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3233177+01:00</timeStamp>
+    <typeFullName>
+      <string>MenuManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5ed331dc0d94b4d4fad7b0f2e68ef065</guid>
+    <fileName>Assets/Noah/Scripts/Platform/MovingPlatform.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3243142+01:00</timeStamp>
+    <typeFullName>
+      <string>MovingPlatform</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e414a808206132c4bb650490c05ef7a5</guid>
+    <fileName>Assets/Noah/Scripts/Player/GameController.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3243142+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Player.GameController</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8732836ef0ddf904db4e3b4a3209da89</guid>
+    <fileName>Assets/Noah/Scripts/Player/PlayerController.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.325311+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.Player.PlayerController</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>81ab82a89faf02f4388d8ab9c34f919b</guid>
+    <fileName>Assets/Noah/Scripts/Scene/SceneField.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.325311+01:00</timeStamp>
+    <typeFullName>
+      <string>SceneField</string>
+      <string>SceneFieldPropertyDrawer</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7873f9e82275e0746bf1da4993f6ad13</guid>
+    <fileName>Assets/Noah/Scripts/Scene/SceneLoadTrigger.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.325311+01:00</timeStamp>
+    <typeFullName>
+      <string>SceneLoadTrigger</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>3049df7fd956ab5489c0b5175cfbf393</guid>
+    <fileName>Assets/Noah/Scripts/Sound/SoundFXManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3263075+01:00</timeStamp>
+    <typeFullName>
+      <string>SoundFXManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>009f4f37ede36894e9848bbf3fef1451</guid>
+    <fileName>Assets/Noah/Scripts/Sound/SoundMixerManager.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3263075+01:00</timeStamp>
+    <typeFullName>
+      <string>SoundMixerManager</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>eacc8a09bb10201499affa499e5ae40f</guid>
+    <fileName>Assets/Noah/Scripts/WhiteFlash/WhiteFlash.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.3273042+01:00</timeStamp>
+    <typeFullName>
+      <string>Noah.Scripts.WhiteFlash.WhiteFlash</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>da6a52b737d9d324fb151ffc4442d930</guid>
+    <fileName>Assets/Sprites/Backgrounds/Script/Parallax.cs</fileName>
+    <timeStamp>2025-01-23T13:47:12.3537817+01:00</timeStamp>
+    <typeFullName>
+      <string>Parallax</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>52fea17a2d56d46afa0d6cb52e2a4335</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Editor/LeanTweenDocumentationEditor.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7264532+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>52e41e970d9353942b27458440bec9eb</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LeanAudio.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7729001+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanAudioStream</string>
+      <string>LeanAudio</string>
+      <string>LeanAudioOptions</string>
+      <string>LeanAudioOptions+LeanAudioWaveStyle</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1ca0f285af8dd4270bd759978223faad</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LeanSmooth.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.2452798+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanSmooth</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>82464f26ca2ba284a8f92f51248c574a</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LeanTest.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7729001+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanTester</string>
+      <string>LeanTest</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9c2f4b27196f84954b44753aaac214bb</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LeanTween.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.24628+01:00</timeStamp>
+    <typeFullName>
+      <string>TweenAction</string>
+      <string>LeanTweenType</string>
+      <string>LeanProp</string>
+      <string>LeanTween</string>
+      <string>LTUtility</string>
+      <string>LTBezier</string>
+      <string>LTBezierPath</string>
+      <string>LTSpline</string>
+      <string>LTRect</string>
+      <string>LTEvent</string>
+      <string>LTGUI</string>
+      <string>LTGUI+Element_Type</string>
+      <string>DentedPixel.LeanDummy</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5dbe851e9c0814f1d8f514ecf70f675d</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LeanTweenExt.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7738968+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanTweenExt</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>381c8d6fb1acdc348870a7147bc98723</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LTDescr.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.2432865+01:00</timeStamp>
+    <typeFullName>
+      <string>LTDescr</string>
+      <string>LTDescr+EaseTypeDelegate</string>
+      <string>LTDescr+ActionMethodDelegate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c1ba8f1ef97134cb39b52ae26678db63</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LTDescrOptional.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.2442868+01:00</timeStamp>
+    <typeFullName>
+      <string>LTDescrOptional</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6c88dbe4cdd9944f198e9796ee394c86</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Framework/LTSeq.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.2442868+01:00</timeStamp>
+    <typeFullName>
+      <string>LTSeq</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a90f780154ffd401a9a868c44269cf15</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/FollowingTests.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7758902+01:00</timeStamp>
+    <typeFullName>
+      <string>FollowingTests</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c66170e446eef4291a14e7ad1ad5cf24</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/PerformanceTests.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7778834+01:00</timeStamp>
+    <typeFullName>
+      <string>PerformanceTests</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ecd415b8bcf214791b3187917ed9ddac</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/Testing240.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7798823+01:00</timeStamp>
+    <typeFullName>
+      <string>Testing240</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e3aec9f82ce4141eba0a050963c9be35</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/Testing243.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7818729+01:00</timeStamp>
+    <typeFullName>
+      <string>Testing243</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1bdf8eb4fc7034f42a5d6a6fbe199e93</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/Testing246.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7828697+01:00</timeStamp>
+    <typeFullName>
+      <string>Testing246</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7f5c695e16dcb45d0a13ed0d3c75aae2</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/Testing248.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7838668+01:00</timeStamp>
+    <typeFullName>
+      <string>Testing248</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f55bdde2217834dac82393deed0da431</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingColorTweening.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7848632+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingColorTweening</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>34cf2af3be6b8416a96944cea804f678</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingDescr.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7848632+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingDescr</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>19b0aa6aba5884412957780f848ed88b</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingIssue.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7868564+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingIssue</string>
+      <string>TestingIssue2</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>96dcc09c4c2a140ee995898c07cfd3e5</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingIssue2.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7868564+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingIssue2</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5144aefac24634e088391f880d88d35b</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingMaxTweens.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7878529+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingMaxTweens</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>073c63eedd7654d9dbde821193167cb7</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingOptionalCancel.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7888498+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingOptionalCancel</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7cfb0dbe21e2e4ed98e890f53d936b12</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingRotate.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.790844+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingRotate</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>243c96e80797b49eabe0b886084eccbe</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingSceneSwitching.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7918396+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingSceneSwitching</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>637354767abea4dfb8dbf2a06ab5d533</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/TestingSequencer.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7928362+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingSequencer</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>84cd9b84e0604a9abafb77712f1df90a</guid>
+    <fileName>Assets/Samples/Input System/1.7.0/Rebinding UI/GamepadIconsExample.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.4778015+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>cc11d99b1a6682f4cbc4aba1fcd9ac5d</guid>
+    <fileName>Assets/Samples/Input System/1.7.0/Rebinding UI/RebindActionUI.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.4877723+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>fa7fa75d154b431893a88cd8aa9c1d10</guid>
+    <fileName>Assets/Samples/Input System/1.7.0/Rebinding UI/RebindActionUIEditor.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.9683061+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>5b6c2da2db9374dada6761b5e35121c8</guid>
+    <fileName>Assets/Samples/Input System/1.7.0/Rebinding UI/RebindSaveLoad.cs</fileName>
+    <timeStamp>2025-01-23T13:47:13.4877723+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>7e619db3c84234f098b8636588c25e4f</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/Following.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7609362+01:00</timeStamp>
+    <typeFullName>
+      <string>Following</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a4fce1b486cc240c4825b3bfd794e9e0</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralAdvancedTechniques.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7609362+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralAdvancedTechniques</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a2605544ab2e14c93a780ca20c108cfe</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralBasic.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7619329+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralBasic</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9b39dd70d168b4cbea9a7b8561d9accc</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralBasics2d.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7619329+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralBasics2d</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8a650682fa3d54a57a2521dbf9f6eac2</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralCameraShake.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7619329+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralCameraShake</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>94e9a883a33cd40b9be1a63f002c4db2</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralEasingTypes.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7629295+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralEasingTypes</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cd679d4fbbd8d475ba7187561370c3aa</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralEventsListeners.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7629295+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralEventsListeners</string>
+      <string>GeneralEventsListeners+MyEvents</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5b54bce4a9ed14e28a4a423c794a2d70</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralSequencer.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7639388+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralSequencer</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>19c352f230e8b46f08abbbd7cc11edb8</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralSimpleUI.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7639388+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralSimpleUI</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cc2ddccee016148b189d987f564ee08e</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/GeneralUISpace.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7639388+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralUISpace</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>674f3c10d8880408e875a9e6c3ee83bb</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/LogoCinematic.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7649283+01:00</timeStamp>
+    <typeFullName>
+      <string>LogoCinematic</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ac2038ba3961049ed889ae71039982cd</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathBezier.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7649283+01:00</timeStamp>
+    <typeFullName>
+      <string>DentedPixel.LTExamples.PathBezier</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>873cb511c724a48bd919ce8a18fa882c</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathBezier2d.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7659235+01:00</timeStamp>
+    <typeFullName>
+      <string>PathBezier2d</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ef4235237d8d8413c9d5807cf0a1f77b</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSpline.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7659235+01:00</timeStamp>
+    <typeFullName>
+      <string>ExampleSpline</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>15c036b11e3ff486ea685da06fa305f6</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSpline2d.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7659235+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSpline2d</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>784f0e347ee4d4c3b83ca56d6f33f01a</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSplineEndless.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7669202+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplineEndless</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5de62495c8a5d49e6b3ca111f8c7e944</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSplinePerformance.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7669202+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplinePerformance</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>de0396ae3eef541c190f0e6962090454</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSplines.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7669202+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplines</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>31af73f8be2864eda9a3fbb6d0d2a9c7</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/PathSplineTrack.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7679169+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplineTrack</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>fef58bd01146344429d022b95c6af872</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/TestingUnitTests.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7679169+01:00</timeStamp>
+    <typeFullName>
+      <string>DentedPixel.LTExamples.TestingUnitTests</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ed8575995d061498aa84acbaf0b377de</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/TestingZLegacy.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7689135+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingZLegacy</string>
+      <string>TestingZLegacy+NextFunc</string>
+      <string>TestingZLegacy+TimingType</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c5a76b5b44fc4416a82391d1ab9ec33d</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Examples/Scripts/TestingZLegacyExt.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7689135+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingZLegacyExt</string>
+      <string>TestingZLegacyExt+NextFunc</string>
+      <string>TestingZLegacyExt+TimingType</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d91eaf320032e4b1daa82aad9b7a98c5</guid>
+    <fileName>Assets/Noah/Imports/LeanTween/Testing/Scripts/LeanPool.cs</fileName>
+    <timeStamp>2025-01-23T14:24:46.7748936+01:00</timeStamp>
+    <typeFullName>
+      <string>DentedPixel.LeanPool</string>
+    </typeFullName>
+    <assembly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assembly>
+  </TypeDate>
+</ArrayOfTypeDate>
