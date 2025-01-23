@@ -1,182 +1,184 @@
-using Noah.Scripts.Player;
+using Components;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using PlayerController = Elias.Scripts.Components.PlayerController;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+namespace Menu
 {
-    [Header("Menu Objects")]
-    [SerializeField] private GameObject _mainMenuCanvasGO;
-    [SerializeField] private GameObject _settingsMenuCanvasGO;
-    [SerializeField] private GameObject _volumeMenuCanvasGO;
-    [SerializeField] private GameObject _keyboardMenuCanvasGO;
-    [SerializeField] private GameObject _gamepadMenuCanvasGO;
+    public class MenuManager : MonoBehaviour
+    {
+        [Header("Menu Objects")]
+        [SerializeField] private GameObject _mainMenuCanvasGO;
+        [SerializeField] private GameObject _settingsMenuCanvasGO;
+        [SerializeField] private GameObject _volumeMenuCanvasGO;
+        [SerializeField] private GameObject _keyboardMenuCanvasGO;
+        [SerializeField] private GameObject _gamepadMenuCanvasGO;
 
 
-    [Header("First Selected Options")] 
-    [SerializeField] private GameObject _mainMenuFirst;
-    [SerializeField] private GameObject _settingsMenuFirst;
-    [SerializeField] private GameObject _volumeMenuFirst;
-    [SerializeField] private GameObject _keyboardMenuFirst;
-    [SerializeField] private GameObject _gamepadMenuFirst;
+        [Header("First Selected Options")] 
+        [SerializeField] private GameObject _mainMenuFirst;
+        [SerializeField] private GameObject _settingsMenuFirst;
+        [SerializeField] private GameObject _volumeMenuFirst;
+        [SerializeField] private GameObject _keyboardMenuFirst;
+        [SerializeField] private GameObject _gamepadMenuFirst;
     
-    [SerializeField] private SceneField _levelScene;
+        [SerializeField] private SceneField _levelScene;
 
 
 
-    private bool _isPaused;
+        private bool _isPaused;
 
-    private void Start()
-    {
-        _mainMenuCanvasGO.SetActive(false);
-        _settingsMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (InputManager.instance.MenuOpenCloseInput)
+        private void Start()
         {
-            if (!_isPaused)
+            _mainMenuCanvasGO.SetActive(false);
+            _settingsMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
+        }
+
+        private void Update()
+        {
+            if (InputManager.instance.MenuOpenCloseInput)
             {
-                Pause();
-            }
-            else
-            {
-                Unpause();
+                if (!_isPaused)
+                {
+                    Pause();
+                }
+                else
+                {
+                    Unpause();
+                }
             }
         }
-    }
     
-    #region Pause/Unpause Functions
-    private void Pause()
-    {
-        _isPaused = true;
-        Time.timeScale = 0f;
-        PlayerController.Instance.enabled = false;
-        OpenMainMenu();
-    }
+        #region Pause/Unpause Functions
+        private void Pause()
+        {
+            _isPaused = true;
+            Time.timeScale = 0f;
+            PlayerController.Instance.enabled = false;
+            OpenMainMenu();
+        }
 
-    private void Unpause()
-    {
-        _isPaused = false;
-        Time.timeScale = 1f;
-        PlayerController.Instance.enabled = true;
-        CloseAllMenus();
-    }
-    #endregion
+        private void Unpause()
+        {
+            _isPaused = false;
+            Time.timeScale = 1f;
+            PlayerController.Instance.enabled = true;
+            CloseAllMenus();
+        }
+        #endregion
     
-    #region Canvas Activations
+        #region Canvas Activations
 
-    private void OpenMainMenu()
-    {
-        _mainMenuCanvasGO.SetActive(true);
-        _settingsMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
+        private void OpenMainMenu()
+        {
+            _mainMenuCanvasGO.SetActive(true);
+            _settingsMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(_mainMenuFirst);
-    }
+            EventSystem.current.SetSelectedGameObject(_mainMenuFirst);
+        }
     
-    private void OpenSettingsMenuHandle()
-    {
-        _settingsMenuCanvasGO.SetActive(true);
-        _mainMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
+        private void OpenSettingsMenuHandle()
+        {
+            _settingsMenuCanvasGO.SetActive(true);
+            _mainMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(_settingsMenuFirst);
-    }
+            EventSystem.current.SetSelectedGameObject(_settingsMenuFirst);
+        }
     
-    private void OpenVolumeMenuHandle()
-    {
-        _volumeMenuCanvasGO.SetActive(true);
-        _mainMenuCanvasGO.SetActive(false);
-        _settingsMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
+        private void OpenVolumeMenuHandle()
+        {
+            _volumeMenuCanvasGO.SetActive(true);
+            _mainMenuCanvasGO.SetActive(false);
+            _settingsMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(_volumeMenuFirst);
-    }
+            EventSystem.current.SetSelectedGameObject(_volumeMenuFirst);
+        }
 
-    private void OpenKeyboardMenuHandle()
-    {
-        _keyboardMenuCanvasGO.SetActive(true);
-        _mainMenuCanvasGO.SetActive(false);
-        _settingsMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
+        private void OpenKeyboardMenuHandle()
+        {
+            _keyboardMenuCanvasGO.SetActive(true);
+            _mainMenuCanvasGO.SetActive(false);
+            _settingsMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(_keyboardMenuFirst);
-    }
-    private void OpenGamepadMenuHandle()
-    {
-        _gamepadMenuCanvasGO.SetActive(true);
-        _mainMenuCanvasGO.SetActive(false);
-        _settingsMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(_keyboardMenuFirst);
+        }
+        private void OpenGamepadMenuHandle()
+        {
+            _gamepadMenuCanvasGO.SetActive(true);
+            _mainMenuCanvasGO.SetActive(false);
+            _settingsMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(_gamepadMenuFirst);
-    }
+            EventSystem.current.SetSelectedGameObject(_gamepadMenuFirst);
+        }
 
 
-    private void CloseAllMenus()
-    {
-        _mainMenuCanvasGO.SetActive(false);
-        _settingsMenuCanvasGO.SetActive(false);
-        _volumeMenuCanvasGO.SetActive(false);
-        _keyboardMenuCanvasGO.SetActive(false);
-        _gamepadMenuCanvasGO.SetActive(false);
+        private void CloseAllMenus()
+        {
+            _mainMenuCanvasGO.SetActive(false);
+            _settingsMenuCanvasGO.SetActive(false);
+            _volumeMenuCanvasGO.SetActive(false);
+            _keyboardMenuCanvasGO.SetActive(false);
+            _gamepadMenuCanvasGO.SetActive(false);
         
-        EventSystem.current.SetSelectedGameObject(null);
-    }
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     
-    #endregion
+        #endregion
 
-    #region Main Menu Button Actions
+        #region Main Menu Button Actions
 
-    public void OnSettingsPress()
-    {
-        OpenSettingsMenuHandle();
-    }
+        public void OnSettingsPress()
+        {
+            OpenSettingsMenuHandle();
+        }
 
-    public void OnResumePress()
-    {
-        Unpause();
-    }
+        public void OnResumePress()
+        {
+            Unpause();
+        }
 
-    public void OnBackToMenuQuit()
-    {
-        SceneManager.LoadSceneAsync(_levelScene);
-    }
-    #endregion
+        public void OnBackToMenuQuit()
+        {
+            SceneManager.LoadSceneAsync(_levelScene);
+        }
+        #endregion
 
-    #region Settings Menu Button Actions
+        #region Settings Menu Button Actions
 
-    public void OnSettingsVolumePress()
-    {
-        OpenVolumeMenuHandle();
-    }
-    public void OnSettingsKeyboardPress()
-    {
-        OpenKeyboardMenuHandle();
-    }
-    public void OnSettingsGamepadPress()
-    {
-        OpenGamepadMenuHandle();
-    }
-    public void OnSettingsBackPress()
-    {
-        OpenMainMenu();
-    }
+        public void OnSettingsVolumePress()
+        {
+            OpenVolumeMenuHandle();
+        }
+        public void OnSettingsKeyboardPress()
+        {
+            OpenKeyboardMenuHandle();
+        }
+        public void OnSettingsGamepadPress()
+        {
+            OpenGamepadMenuHandle();
+        }
+        public void OnSettingsBackPress()
+        {
+            OpenMainMenu();
+        }
     
     
-    #endregion
+        #endregion
     
+    }
 }

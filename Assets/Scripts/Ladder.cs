@@ -1,6 +1,5 @@
+using Components;
 using UnityEngine;
-using PlayerController = Elias.Scripts.Components.PlayerController;
-
 public class Ladder : MonoBehaviour
 {
     
@@ -8,7 +7,7 @@ public class Ladder : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.IsClimbing = true;
+            PlayerController.Instance.IsClimbing= true;
         }        
     }
 
@@ -16,7 +15,7 @@ public class Ladder : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.IsClimbing = false;
+            PlayerController.Instance.IsClimbing = false;
         }  
     }
 }

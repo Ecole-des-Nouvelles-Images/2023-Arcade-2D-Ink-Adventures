@@ -4,7 +4,7 @@ public class ParallaxScript : MonoBehaviour
 {
     public Transform[] layers; // Les différentes couches d'objets parallaxe
     public float[] parallaxFactors; // Les facteurs de parallaxe pour chaque couche
-    public Camera killMe; // Ma camera
+    public UnityEngine.Camera killMe; // Ma camera
 
     private Vector3 lastCameraPosition;
 

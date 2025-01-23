@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Noah.Scripts.Player;
+using Components;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -17,7 +14,6 @@ public class MovingPlatform : MonoBehaviour
     private int _direction = 1;
     
     private Vector3 _targetPos;
-    private PlayerController _playerController;
     private Rigidbody2D _rb;
     private Vector2 _moveDirection;
 
@@ -92,8 +88,8 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Elias.Scripts.Components.PlayerController.Instance.IsOnPlatform = true;
-            Elias.Scripts.Components.PlayerController.Instance.PlatformRb = _rb;
+            PlayerController.Instance.IsOnPlatform = true;
+            PlayerController.Instance.PlatformRb = _rb;
         }
     }
     
@@ -101,7 +97,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.instance.IsOnPlatform = false;
+            PlayerController.Instance.IsOnPlatform = false;
         }
     }
     

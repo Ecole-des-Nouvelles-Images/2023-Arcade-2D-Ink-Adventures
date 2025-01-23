@@ -1,9 +1,9 @@
-using Elias.Scripts.Components;
+using Components;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-namespace Noah.Scripts.WhiteFlash
+namespace WhiteFlash
 {
     public class WhiteFlash : MonoBehaviour
     {
