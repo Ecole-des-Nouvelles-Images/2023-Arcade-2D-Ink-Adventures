@@ -16783,6 +16783,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -9
       objectReference: {fileID: 0}
+    - target: {fileID: 8887829738937884884, guid: 6ebe51d841c3eb844ad3e4b4493c1be1, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9151422157987894579, guid: 6ebe51d841c3eb844ad3e4b4493c1be1, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -28433,7 +28437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146635009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5886cbf77a1c0f498987d75634fa00a, type: 3}
+  m_Script: {fileID: 11500000, guid: a3907c40a98c82c43b6ddcff2fbb4158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _customizeMenuGO: {fileID: 1272290582}
@@ -51965,6 +51969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b121cee5a1563a41bbdbb3fcce0564d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsClimbing: 0
   IsOnPlatform: 0
   PlatformRb: {fileID: 0}
   _moveSpeed: 7.5
