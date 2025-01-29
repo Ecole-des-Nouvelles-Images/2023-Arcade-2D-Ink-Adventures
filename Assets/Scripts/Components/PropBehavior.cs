@@ -2,12 +2,12 @@ using System;
 using Elias.Scripts.Helper;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 
-namespace Elias.Scripts.Components
+namespace Components
 {
     public class PropBehavior : MonoBehaviour
     {
-        
         [Serializable]
         enum PropBehaviorType
         {
@@ -16,8 +16,8 @@ namespace Elias.Scripts.Components
             Danger
         }
 
-        [SerializeField] private PropBehaviorType propBehaviorType;
-        [SerializeField] private float disabledOpacity;
+        [SerializeField] private PropBehaviorType _propBehaviorType;
+        [SerializeField] private float _disabledOpacity;
 
         private SpriteRenderer _spriteRenderer;
         private BoxCollider2D _boxCollider2D;
@@ -37,7 +37,7 @@ namespace Elias.Scripts.Components
         {
             _originalTag = gameObject.tag;
             _playerGameObject = GameObject.FindGameObjectWithTag("Player");
-            _playerLight = _playerGameObject.GetComponent<Light2D>();
+            _playerLight = PlayerController.Instance.transform.Find("Light").GetComponent<Light2D>();
         }
 
         private void Update()
@@ -46,18 +46,18 @@ namespace Elias.Scripts.Components
             bool isMatching = ColorHelpers.Match(propColor, _playerLight.color);
             gameObject.tag = !isMatching ? "Untagged" : _originalTag;
 
-            switch (propBehaviorType)
+            switch (_propBehaviorType)
             {
                 case PropBehaviorType.Collider:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : disabledOpacity);
+                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
                     _boxCollider2D.isTrigger = !isMatching;
                     break;
                 case PropBehaviorType.Interactable:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : disabledOpacity);
+                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
                     _boxCollider2D.enabled = isMatching;
                     break;
                 case PropBehaviorType.Danger:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : disabledOpacity);
+                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
                     _boxCollider2D.enabled = isMatching;
                     break;
                 default:

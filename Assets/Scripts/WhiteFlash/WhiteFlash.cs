@@ -28,7 +28,7 @@ namespace WhiteFlash
 
         void Start()
         {
-            _light2D = PlayerController.Instance.GetComponent<Light2D>(); // Get the Light2D component from this GameObject
+            _light2D = PlayerController.Instance.GetComponentInChildren<Light2D>();
         }
         
         private void HideMenu()

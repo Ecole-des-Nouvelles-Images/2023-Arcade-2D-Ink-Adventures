@@ -18,8 +18,9 @@ namespace Elias.Scripts.Components
 
         
 
-        private void Awake() {
-            _playerLight = GetComponent<Light2D>();
+        private void Start()
+        {
+            _playerLight = PlayerController.Instance.GetComponentInChildren<Light2D>();
         }
         
 
