@@ -100,6 +100,8 @@ namespace Components
 
         private void Update()
         {
+            CheckGround();
+            Debug.Log(_isGrounded? "Grounded":"Not Grounded");
             if (canMove)
             {
                 if (canJump)
@@ -107,9 +109,10 @@ namespace Components
                     Jump();
                 }
             }
+            
 
-            GrabBox();
-            ReleaseBox();
+            // GrabBox();
+            // ReleaseBox();
             HandleCameraDamping();
             UpdateAnimations();
             HandleIdle();
@@ -126,37 +129,46 @@ namespace Components
         }
 
         #region Jump Function
+        
+        private void CheckGround()
+        {
+            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 10f, _whatIsGround);
+            Debug.DrawRay(transform.position, Vector2.down * 10f, Color.red);
+        }
+
 
         private void Jump()
         {
-            if (InputManager.instance.JumpJustPressed && (_isGrounded || IsClimbing))
+            if (InputManager.instance.JumpJustPressed && _isGrounded)
             {
                 _isJumping = true;
                 _jumpTimeCounter = _jumpTime;
                 _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
                 canJump = false;
                 StartCoroutine(JumpCooldown());
-            }
-
-            if (InputManager.instance.JumpJustPressed && _isGrounded)
-            {
                 JumpSound();
             }
 
-            if (InputManager.instance.JumpBeingHeld)
+            if (InputManager.instance.JumpBeingHeld && _isJumping)
             {
-                HandleJumpHeld();
+                if (_jumpTimeCounter > 0)
+                {
+                    _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+                    _jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    _isJumping = false;
+                }
             }
 
             if (InputManager.instance.JumpReleased)
             {
                 _isJumping = false;
-                _isFalling = true;
-            }
-
-            if (!_isJumping && CheckForLand())
-            {
-                _resetTriggerCoroutine = StartCoroutine(Reset());
+                if (_rb.velocity.y > 0)
+                {
+                    _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * 0.5f);
+                }
             }
         }
 
@@ -234,36 +246,7 @@ namespace Components
         #endregion
 
         #region Ground/Landed + Push/Pull Functions
-
-        private void OnTriggerStay2D(Collider2D other)
-        {
-            if (Tags.CompareTags("Movable", other.gameObject))
-            {
-                _canMoveBox = true;
-                _movableBox = other.gameObject;
-            }
-
-            if (other.CompareTag("Movable,Ground") || other.CompareTag("Ground"))
-            {
-                _isGrounded = true;
-                canJump = true;
-            }
-        }
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (Tags.CompareTags("Movable", other.gameObject)) _canMoveBox = false;
-        }
-
-        private void OnCollisionExit2D(Collision2D other)
-        {
-            if (Tags.CompareTags("Ground", other.gameObject))
-            {
-                _isGrounded = false;
-                canJump = false;
-            }
-        }
-
+        
         private void GrabBox()
         {
             if (_isGrounded && InputManager.instance.PushPullBeingHeld && _canMoveBox && _movableBox != null)

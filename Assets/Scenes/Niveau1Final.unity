@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 1
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!61 &103941797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2082,8 +2082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1001 &1016513379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2202,8 +2202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1 &1081592766
 GameObject:
   m_ObjectHideFlags: 0
@@ -9999,7 +9999,7 @@ GameObject:
   - component: {fileID: 1207649842}
   - component: {fileID: 1207649841}
   - component: {fileID: 1207649840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -15458,8 +15458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 1
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!61 &1264882443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16286,8 +16286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1001 &1504085635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16470,8 +16470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 2
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1 &1580188138
 GameObject:
   m_ObjectHideFlags: 0
