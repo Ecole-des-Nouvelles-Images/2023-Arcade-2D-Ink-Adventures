@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Components;
 using Elias.Scripts.Helper;
+using Input;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
@@ -60,23 +61,23 @@ namespace Elias.Scripts.Components
         
         private void InputSwitchColor()
         {
-            if (InputManager.instance.RedLightJustPressed) {
-                ChangeColor(InputManager.instance.GreenLightBeingHeld, 
-                        Color.yellow, InputManager.instance.BlueLightBeingHeld, 
+            if (OldInputManager.instance.RedLightJustPressed) {
+                ChangeColor(OldInputManager.instance.GreenLightBeingHeld, 
+                        Color.yellow, OldInputManager.instance.BlueLightBeingHeld, 
                         Color.magenta, Color.red);
                 
             }
 
-            if (InputManager.instance.GreenLightJustPressed) {
-                ChangeColor(InputManager.instance.BlueLightBeingHeld, 
-                    Color.cyan, InputManager.instance.RedLightBeingHeld, 
+            if (OldInputManager.instance.GreenLightJustPressed) {
+                ChangeColor(OldInputManager.instance.BlueLightBeingHeld, 
+                    Color.cyan, OldInputManager.instance.RedLightBeingHeld, 
                     Color.yellow, Color.green);
                 
             }
             
-            if (InputManager.instance.BlueLightJustPressed) {
-                ChangeColor(InputManager.instance.RedLightBeingHeld, 
-                    Color.magenta, InputManager.instance.GreenLightBeingHeld, 
+            if (OldInputManager.instance.BlueLightJustPressed) {
+                ChangeColor(OldInputManager.instance.RedLightBeingHeld, 
+                    Color.magenta, OldInputManager.instance.GreenLightBeingHeld, 
                     Color.cyan, Color.blue);
                 
             }

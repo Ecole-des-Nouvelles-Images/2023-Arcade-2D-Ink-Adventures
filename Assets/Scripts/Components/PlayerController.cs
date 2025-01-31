@@ -1,5 +1,6 @@
 using System.Collections;
 using Camera;
+using Input;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
@@ -132,14 +133,14 @@ namespace Components
         
         private void CheckGround()
         {
-            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 10f, _whatIsGround);
-            Debug.DrawRay(transform.position, Vector2.down * 10f, Color.red);
+            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1.23f, _whatIsGround);
+            Debug.DrawRay(transform.position, Vector2.down * 1.23f, Color.red);
         }
 
 
         private void Jump()
         {
-            if (InputManager.instance.JumpJustPressed && _isGrounded)
+            if (OldInputManager.instance.JumpJustPressed && _isGrounded)
             {
                 _isJumping = true;
                 _jumpTimeCounter = _jumpTime;
@@ -149,7 +150,7 @@ namespace Components
                 JumpSound();
             }
 
-            if (InputManager.instance.JumpBeingHeld && _isJumping)
+            if (OldInputManager.instance.JumpBeingHeld && _isJumping)
             {
                 if (_jumpTimeCounter > 0)
                 {
@@ -162,7 +163,7 @@ namespace Components
                 }
             }
 
-            if (InputManager.instance.JumpReleased)
+            if (OldInputManager.instance.JumpReleased)
             {
                 _isJumping = false;
                 if (_rb.velocity.y > 0)
@@ -202,8 +203,8 @@ namespace Components
 
         private void Climb()
         {
-            _moveInputx = InputManager.instance.MoveInput.x;
-            _moveInputy = InputManager.instance.MoveInput.y;
+            _moveInputx = OldInputManager.instance.MoveInput.x;
+            _moveInputy = OldInputManager.instance.MoveInput.y;
 
             if (IsClimbing)
             {
@@ -222,7 +223,7 @@ namespace Components
 
         private void Move()
         {
-            _moveInputx = InputManager.instance.MoveInput.x;
+            _moveInputx = OldInputManager.instance.MoveInput.x;
 
             if (_moveInputx != 0) TurnCheck();
             if (IsOnPlatform)
@@ -249,7 +250,7 @@ namespace Components
         
         private void GrabBox()
         {
-            if (_isGrounded && InputManager.instance.PushPullBeingHeld && _canMoveBox && _movableBox != null)
+            if (_isGrounded && OldInputManager.instance.PushPullBeingHeld && _canMoveBox && _movableBox != null)
             {
                 _movableRigidbody2D = _movableBox.GetComponent<Rigidbody2D>();
                 if (_movableRigidbody2D != null)
@@ -270,7 +271,7 @@ namespace Components
 
         private void ReleaseBox()
         {
-            if (InputManager.instance.PushPullReleased && _movableBox != null)
+            if (OldInputManager.instance.PushPullReleased && _movableBox != null)
             {
                 _movableRigidbody2D = _movableBox.GetComponent<Rigidbody2D>();
                 if (_movableRigidbody2D != null)
@@ -316,9 +317,9 @@ namespace Components
 
         private void TurnCheck()
         {
-            if (InputManager.instance.MoveInput.x > 0 && !IsFacingRight)
+            if (OldInputManager.instance.MoveInput.x > 0 && !IsFacingRight)
                 Turn();
-            else if (InputManager.instance.MoveInput.x < 0 && IsFacingRight)
+            else if (OldInputManager.instance.MoveInput.x < 0 && IsFacingRight)
                 Turn();
         }
 

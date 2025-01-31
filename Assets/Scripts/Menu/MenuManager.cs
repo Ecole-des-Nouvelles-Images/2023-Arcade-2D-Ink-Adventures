@@ -1,4 +1,5 @@
 using Components;
+using Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -39,7 +40,7 @@ namespace Menu
 
         private void Update()
         {
-            if (InputManager.instance.MenuOpenCloseInput)
+            if (OldInputManager.instance.MenuOpenCloseInput)
             {
                 if (!_isPaused)
                 {

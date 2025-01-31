@@ -1,5 +1,6 @@
 using System.Collections;
 using Components;
+using Input;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -26,12 +27,12 @@ namespace Menu
 
         private void Update()
         {
-            if (InputManager.instance.MenuOpenCloseInput && !_onPause)
+            if (OldInputManager.instance.MenuOpenCloseInput && !_onPause)
             {
                 _onPause = true;
             }
 
-            if (InputManager.instance.MenuOpenCloseInput && _onPause)
+            if (OldInputManager.instance.MenuOpenCloseInput && _onPause)
             {
                 _onPause = false;
             }
