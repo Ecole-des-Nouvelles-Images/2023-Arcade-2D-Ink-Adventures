@@ -50,9 +50,8 @@ namespace Player
         public bool DebugShowHeadBumpBox;
 
         [Header("Jump Visualization Tool")] 
-        public bool ShowWalkJump = false;
-        public bool ShowRunJumpArc = false;
-        public bool ShowOnCollision = false;
+        public bool ShowWalkJumpArc = false;
+        public bool StopOnCollision = false;
         public bool DrawRight = true;
         [Range(5, 100)] public int ArcResolution = 20;
         [Range(0, 500)] public int VisualizationSteps = 90;

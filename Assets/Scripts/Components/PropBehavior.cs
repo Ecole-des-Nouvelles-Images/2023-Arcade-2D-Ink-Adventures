@@ -1,5 +1,6 @@
 using System;
 using Elias.Scripts.Helper;
+using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Serialization;
@@ -37,7 +38,7 @@ namespace Components
         {
             _originalTag = gameObject.tag;
             _playerGameObject = GameObject.FindGameObjectWithTag("Player");
-            _playerLight = PlayerController.Instance.transform.Find("Light").GetComponent<Light2D>();
+            _playerLight = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
         }
 
         private void Update()

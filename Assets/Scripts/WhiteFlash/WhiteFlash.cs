@@ -1,4 +1,5 @@
 using Components;
+using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
@@ -28,7 +29,7 @@ namespace WhiteFlash
 
         void Start()
         {
-            _light2D = PlayerController.Instance.GetComponentInChildren<Light2D>();
+            _light2D = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
         }
         
         private void HideMenu()

@@ -37,6 +37,7 @@ namespace Menu
                 _onPause = false;
             }
 
+            /*
             if (_onCustomizing)
             {
                 PlayerController.Instance._anim.SetBool("IsWalking", false);
@@ -49,6 +50,7 @@ namespace Menu
                 PlayerController.Instance.canMove = true;
                 PlayerController.Instance.audioSource.mute = false;
             }
+            */
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -70,8 +72,10 @@ namespace Menu
         {
             _onCustomizing = true;
             Time.timeScale = 1f;
+            /*
             PlayerController.Instance.canJump = false;
             PlayerController.Instance.canMove = false;
+            */
         }
 
         private void Unpause()
@@ -79,7 +83,7 @@ namespace Menu
             StartCoroutine(EnableJumpAfterDelay());
             _onCustomizing = false;
             Time.timeScale = 1f;
-            PlayerController.Instance.canMove = true;
+            // PlayerController.Instance.canMove = true;
         }
 
         private void OpenMenu()
@@ -97,7 +101,7 @@ namespace Menu
         private IEnumerator EnableJumpAfterDelay()
         {
             yield return new WaitForSeconds(0.1f);
-            PlayerController.Instance.canJump = true;
+            // PlayerController.Instance.canJump = true;
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Components;
 using Elias.Scripts.Helper;
 using Input;
+using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
@@ -21,7 +22,7 @@ namespace Elias.Scripts.Components
 
         private void Start()
         {
-            _playerLight = PlayerController.Instance.GetComponentInChildren<Light2D>();
+            _playerLight = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
         }
         
 

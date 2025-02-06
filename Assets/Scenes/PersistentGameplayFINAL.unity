@@ -390,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13855468}
   - component: {fileID: 13855469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: leftWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3894,7 +3894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173465212}
   - component: {fileID: 173465213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: floorCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12340,7 +12340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 337896112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: _____HouseCustom_____
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22623,7 +22623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 768086937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23172,7 +23172,7 @@ GameObject:
   - component: {fileID: 802318633}
   - component: {fileID: 802318634}
   - component: {fileID: 802318635}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23903,7 +23903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885905932}
   - component: {fileID: 885905933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28928,7 +28928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168830821}
   - component: {fileID: 1168830822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: roofCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50993,7 +50993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835724219}
   - component: {fileID: 1835724220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rightWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51978,7 +51978,7 @@ Transform:
   m_GameObject: {fileID: 1868945317}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.15, y: -2.34, z: 0}
+  m_LocalPosition: {x: 32.15, y: -2.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -53012,7 +53012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918998477}
   - component: {fileID: 1918998478}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58530,7 +58530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139160544}
   - component: {fileID: 2139160545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
