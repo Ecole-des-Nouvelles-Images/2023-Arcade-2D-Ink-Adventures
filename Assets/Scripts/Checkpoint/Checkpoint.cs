@@ -1,5 +1,5 @@
 using System;
-using Noah.Scripts.Player;
+using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 

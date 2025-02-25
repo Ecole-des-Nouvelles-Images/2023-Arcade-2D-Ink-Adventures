@@ -28,7 +28,7 @@ MonoBehaviour:
   TimeTillJumpApex: 0.35
   GravityOnReleaseMultiplier: 1.1
   MaxFallSpeed: 26
-  NumberOfJumpsAllowed: 5
+  NumberOfJumpsAllowed: 1
   TimeForUpwardsCancel: 0.025
   ApexThreshold: 0.762
   ApexHangTime: 0.075
@@ -39,5 +39,5 @@ MonoBehaviour:
   ShowWalkJumpArc: 1
   StopOnCollision: 0
   DrawRight: 1
-  ArcResolution: 20
+  ArcResolution: 60
   VisualizationSteps: 90

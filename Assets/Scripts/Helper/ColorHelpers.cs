@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Elias.Scripts.Helper
+namespace Helper
 {
     public static class ColorHelpers
     {

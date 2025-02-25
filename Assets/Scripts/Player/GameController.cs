@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Noah.Scripts.Player
+namespace Player
 {
     public class GameController : MonoBehaviour
     {
