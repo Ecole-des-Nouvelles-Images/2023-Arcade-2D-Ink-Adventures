@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Common;
 using Components;
 using Player;
 using UnityEngine;
@@ -9,8 +10,6 @@ namespace ChangeColor
 {
     public class PlayerColorManager : MonoBehaviour
     {
-        public event Action<Color> OnColorChanged;
-
         public List<Color> SwitchableColors = new List<Color>();
         private Light2D _playerLight;
 
@@ -24,7 +23,7 @@ namespace ChangeColor
             if (SwitchableColors.Contains(newColor))
             {
                 _playerLight.color = newColor;
-                OnColorChanged?.Invoke(newColor);
+                GameEvents.OnColorChanged?.Invoke(newColor);
                 PlayerController.Instance.PlayRandomLampSound();
             }
         }

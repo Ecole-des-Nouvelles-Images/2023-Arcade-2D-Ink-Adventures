@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Common;
 using Components;
 using Elias.Scripts.Helper;
 using Helper;
@@ -12,10 +14,20 @@ namespace ChangeColor
         private List<PropBehavior> _propColorColliders = new List<PropBehavior>();
         private PlayerColorManager _colorManager;
 
+        public void OnEnable()
+        {
+            GameEvents.OnColorChanged += OnPlayerColorChanged;
+        }
+        
+        public void OnDisable()
+        {
+            GameEvents.OnColorChanged -= OnPlayerColorChanged;
+        }
+
         private void Start()
         {
             _colorManager = GetComponent<PlayerColorManager>();
-            _colorManager.OnColorChanged += OnPlayerColorChanged;
+            GameEvents.OnColorChanged += OnPlayerColorChanged;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

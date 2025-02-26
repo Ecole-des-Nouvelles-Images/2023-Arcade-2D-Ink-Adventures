@@ -51894,7 +51894,9 @@ GameObject:
   - component: {fileID: 1868945322}
   - component: {fileID: 1868945328}
   - component: {fileID: 1868945320}
-  - component: {fileID: 1868945318}
+  - component: {fileID: 1868945331}
+  - component: {fileID: 1868945330}
+  - component: {fileID: 1868945329}
   - component: {fileID: 1868945327}
   m_Layer: 7
   m_Name: -- PLAYER
@@ -51903,20 +51905,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1868945318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868945317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3331939d41f865479fb2bc630cdf900, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchableColors: []
-  _UIBulb: {fileID: 1198392604}
 --- !u!114 &1868945320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52098,6 +52086,43 @@ MonoBehaviour:
   MovementStats: {fileID: 11400000, guid: e338364a589b66d43b41a6d2b887cd8e, type: 2}
   _feetCollider: {fileID: 1492053228}
   _bodyCollider: {fileID: 1227420453}
+--- !u!114 &1868945329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868945317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bf1843b9d9cb044b8000285f647e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1868945330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868945317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4d3121b3daa7743bc4a17afa2783b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1868945331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868945317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2557470407361ec4db37979a68b1a560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwitchableColors: []
 --- !u!1 &1869575774
 GameObject:
   m_ObjectHideFlags: 0
@@ -59487,6 +59512,6 @@ SceneRoots:
   - {fileID: 91745173}
   - {fileID: 271824495}
   - {fileID: 1868945326}
-  - {fileID: 57982162}
   - {fileID: 89531904}
   - {fileID: 4915361661268146252}
+  - {fileID: 57982162}

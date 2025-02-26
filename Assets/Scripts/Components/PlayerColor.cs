@@ -21,7 +21,6 @@ namespace Components
             _playerLight = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
         }
         
-
         private void Update() {
             InputSwitchColor();
             if (_UIBulb != null)

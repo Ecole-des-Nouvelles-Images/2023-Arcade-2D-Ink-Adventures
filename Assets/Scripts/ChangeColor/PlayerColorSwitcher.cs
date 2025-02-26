@@ -39,7 +39,7 @@ namespace ChangeColor
         {
             Color newColor = defaultColor;
 
-            if (secondKey && CanMixColors(defaultColor, colorIfBothPressed))
+            if (_colorManager.SwitchableColors.Count >= 2 && secondKey && CanMixColors(defaultColor, colorIfBothPressed))
             {
                 newColor = colorIfBothPressed;
             }
