@@ -15,16 +15,16 @@ namespace ChangeColor
 
         private void Start()
         {
-            _playerLight = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
+            _playerLight = GetComponentInChildren<Light2D>();
         }
 
         public void ChangeColor(Color newColor)
         {
+            if (_playerLight == null) return;
             if (SwitchableColors.Contains(newColor))
             {
                 _playerLight.color = newColor;
                 GameEvents.OnColorChanged?.Invoke(newColor);
-                PlayerController.Instance.PlayRandomLampSound();
             }
         }
     }

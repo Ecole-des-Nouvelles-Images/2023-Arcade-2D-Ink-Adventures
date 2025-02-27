@@ -1,71 +1,47 @@
-using System;
-using Elias.Scripts.Helper;
+using System.Collections.Generic;
 using Helper;
 using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using UnityEngine.Serialization;
 
 namespace Components
 {
     public class PropBehavior : MonoBehaviour
     {
-        [Serializable]
-        enum PropBehaviorType
-        {
-            Collider,
-            Interactable,
-            Danger
-        }
+        [SerializeField] private float _disabledOpacity = 0.5f;
 
-        [SerializeField] private PropBehaviorType _propBehaviorType;
-        [SerializeField] private float _disabledOpacity;
-
-        private SpriteRenderer _spriteRenderer;
+        private List<SpriteRenderer> _spriteRendererList;
         private BoxCollider2D _boxCollider2D;
-        private GameObject _playerGameObject;
         private Light2D _playerLight;
         private float _startOpacity;
-        private string _originalTag;
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRendererList = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            _startOpacity = _spriteRenderer.color.a;
+            if (_spriteRendererList.Count > 0)
+            {
+                _startOpacity = _spriteRendererList[0].color.a;
+            }
         }
 
         private void Start()
         {
-            _originalTag = gameObject.tag;
-            _playerGameObject = GameObject.FindGameObjectWithTag("Player");
             _playerLight = PlayerMovement.Instance.GetComponentInChildren<Light2D>();
         }
 
         private void Update()
         {
-            Color propColor = _spriteRenderer.color;
-            bool isMatching = ColorHelpers.Match(propColor, _playerLight.color);
-            gameObject.tag = !isMatching ? "Untagged" : _originalTag;
+            bool isMatching = false;
 
-            switch (_propBehaviorType)
+            foreach (var spriteRenderer in _spriteRendererList)
             {
-                case PropBehaviorType.Collider:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
-                    _boxCollider2D.isTrigger = !isMatching;
-                    break;
-                case PropBehaviorType.Interactable:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
-                    _boxCollider2D.enabled = isMatching;
-                    break;
-                case PropBehaviorType.Danger:
-                    _spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
-                    _boxCollider2D.enabled = isMatching;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
+                Color propColor = spriteRenderer.color;
+                isMatching = ColorHelpers.Match(propColor, _playerLight.color);
+                spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
             }
-
+            
+            _boxCollider2D.enabled = isMatching;
         }
     }
 }

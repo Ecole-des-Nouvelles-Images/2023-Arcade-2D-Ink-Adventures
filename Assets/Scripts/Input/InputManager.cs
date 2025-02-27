@@ -10,11 +10,22 @@ namespace Input
 
         public static Vector2 Movement;
         public static bool JumpWasPressed;
-        public static bool JumpIsHeld;
+        // public static bool JumpIsHeld;
         public static bool JumpWasReleased;
+        public static bool RedLightButtonWasPressed;
+        public static bool BlueightButtonWasPressed;
+        public static bool GreenLightButtonWasPressed;
+        public static bool RedLightButtonIsHeld;
+        public static bool BlueLightButtonIsHeld;
+        public static bool GreenLightButtonIsHeld;
+
 
         private InputAction _moveAction;
         private InputAction _jumpAction;
+        private InputAction _redLightAction;
+        private InputAction _blueLightAction;
+        private InputAction _greenLightAction;
+
 
         private void Awake()
         {
@@ -22,6 +33,10 @@ namespace Input
             
             _moveAction = PlayerInput.actions["Move"];
             _jumpAction = PlayerInput.actions["Jump"];
+            _redLightAction = PlayerInput.actions["RedLight"];
+            _blueLightAction = PlayerInput.actions["BlueLight"];
+            _greenLightAction = PlayerInput.actions["GreenLight"];
+
         }
 
         private void Update()
@@ -29,8 +44,12 @@ namespace Input
             Movement = _moveAction.ReadValue<Vector2>();
 
             JumpWasPressed = _jumpAction.WasPressedThisFrame();
-            JumpIsHeld = _jumpAction.IsPressed();
+            // JumpIsHeld = _jumpAction.IsPressed();
             JumpWasReleased = _jumpAction.WasReleasedThisFrame();
+            RedLightButtonWasPressed = _redLightAction.WasPressedThisFrame();
+            BlueLightButtonIsHeld = _blueLightAction.WasPressedThisFrame();
+            GreenLightButtonIsHeld = _greenLightAction.WasPressedThisFrame();
+
         }
         
     }

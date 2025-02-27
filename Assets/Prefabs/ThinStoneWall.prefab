@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120279505612042242}
   m_Layer: 8
-  m_Name: LargeWall
+  m_Name: ThinStoneWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1 &5145530595019511919
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,8 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
 --- !u!1 &6811574968724320378
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,5 +495,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propBehaviorType: 0
-  disabledOpacity: 0.2
+  _propBehaviorType: 0
+  _disabledOpacity: 0
