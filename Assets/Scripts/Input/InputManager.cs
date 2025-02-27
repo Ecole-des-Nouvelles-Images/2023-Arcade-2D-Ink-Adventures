@@ -13,7 +13,7 @@ namespace Input
         // public static bool JumpIsHeld;
         public static bool JumpWasReleased;
         public static bool RedLightButtonWasPressed;
-        public static bool BlueightButtonWasPressed;
+        public static bool BlueLightButtonWasPressed;
         public static bool GreenLightButtonWasPressed;
         public static bool RedLightButtonIsHeld;
         public static bool BlueLightButtonIsHeld;
@@ -47,8 +47,8 @@ namespace Input
             // JumpIsHeld = _jumpAction.IsPressed();
             JumpWasReleased = _jumpAction.WasReleasedThisFrame();
             RedLightButtonWasPressed = _redLightAction.WasPressedThisFrame();
-            BlueLightButtonIsHeld = _blueLightAction.WasPressedThisFrame();
-            GreenLightButtonIsHeld = _greenLightAction.WasPressedThisFrame();
+            BlueLightButtonWasPressed = _blueLightAction.WasPressedThisFrame();
+            GreenLightButtonWasPressed = _greenLightAction.WasPressedThisFrame();
 
         }
         

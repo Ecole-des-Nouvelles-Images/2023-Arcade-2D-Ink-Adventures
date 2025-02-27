@@ -5,15 +5,11 @@ namespace ChangeColor
 {
     public class PlayerColorSwitcher : MonoBehaviour
     {
-        public PlayerColorManager _colorManager;
+        private PlayerColorManager _colorManager;
 
         private void Start()
         {
             _colorManager = GetComponent<PlayerColorManager>();
-            if (_colorManager == null)
-            {
-                Debug.LogError("PlayerColorManager component not found.");
-            }
         }
 
 
@@ -26,21 +22,21 @@ namespace ChangeColor
         {
             if (InputManager.RedLightButtonWasPressed)
             {
-                TryChangeColor(Color.red,InputManager.GreenLightButtonIsHeld, Color.yellow, InputManager.BlueLightButtonIsHeld, Color.magenta);
+                SubmitColorChange(Color.red,InputManager.GreenLightButtonIsHeld, Color.yellow, InputManager.BlueLightButtonIsHeld, Color.magenta);
             }
             
-            if (InputManager.BlueightButtonWasPressed)
+            if (InputManager.BlueLightButtonWasPressed)
             {
-                TryChangeColor(Color.blue, InputManager.RedLightButtonWasPressed, Color.magenta, InputManager.GreenLightButtonIsHeld, Color.cyan);
+                SubmitColorChange(Color.blue, InputManager.RedLightButtonIsHeld, Color.magenta, InputManager.GreenLightButtonIsHeld, Color.cyan);
             }
 
             if (InputManager.GreenLightButtonWasPressed)
             {
-                TryChangeColor(Color.green, InputManager.BlueLightButtonIsHeld, Color.cyan, InputManager.RedLightButtonWasPressed, Color.yellow);
+                SubmitColorChange(Color.green, InputManager.BlueLightButtonIsHeld, Color.cyan, InputManager.RedLightButtonIsHeld, Color.yellow);
             }
         }
 
-        private void TryChangeColor(Color defaultColor, bool secondKey, Color colorIfBothPressed, bool thirdKey, Color colorIfThirdPressed)
+        private void SubmitColorChange(Color defaultColor, bool secondKey, Color colorIfBothPressed, bool thirdKey, Color colorIfThirdPressed)
         {
             Color newColor = defaultColor;
             if (secondKey && CanMixColors(defaultColor, colorIfBothPressed))
