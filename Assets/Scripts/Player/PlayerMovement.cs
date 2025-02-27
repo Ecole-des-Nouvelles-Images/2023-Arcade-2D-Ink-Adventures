@@ -80,8 +80,10 @@ namespace Player
         {
             CountTimers();
             JumpChecks();
-            
+            _animator.SetBool("isFastFalling", _isFastFalling);
+            _animator.SetBool("isFalling", _isFalling);
             _animator.SetBool("isJumping", _isJumping);
+            Debug.Log(_rb.velocity.y);
 
         }
 

@@ -10685,7 +10685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 255820008}
   m_Layer: 0
-  m_Name: _Torso + Legs
+  m_Name: ___Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20266,7 +20266,7 @@ GameObject:
   - component: {fileID: 669059106}
   - component: {fileID: 669059107}
   m_Layer: 0
-  m_Name: ChromaAnim_Idle_0000
+  m_Name: ChromaCustom_Neck_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30374,7 +30374,7 @@ GameObject:
   - component: {fileID: 1227420452}
   - component: {fileID: 1227420453}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Chroma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
