@@ -111,26 +111,26 @@ namespace Noah.Scripts.Player
                 CameraManager.Instance.LerpYDamping(false);
             }
             
-            _anim.SetBool("IsWalking", _moveInputx != 0);
+    //        _anim.SetBool("IsWalking", _moveInputx != 0);
             
-            _anim.SetBool("IsJumping", _isJumping);
+   //         _anim.SetBool("IsJumping", _isJumping);
             
-            _anim.SetBool("IsFalling", _isFalling);
+    //        _anim.SetBool("IsFalling", _isFalling);
             
-            _anim.SetBool("IsClimbing", IsClimbing);
+      //      _anim.SetBool("IsClimbing", IsClimbing);
             
-            _anim.SetBool("IsFalling", !_isJumping && !_isGrounded);
+      //      _anim.SetBool("IsFalling", !_isJumping && !_isGrounded);
 
             idleTimer += Time.deltaTime;
             if (idleTimer >= idleThreshold)
             {
-                _anim.SetBool("IsDancing",true);
+      //          _anim.SetBool("IsDancing",true);
             }
 
             if (_moveInputx != 0 || _isJumping)
             {
                 idleTimer = 0;
-                _anim.SetBool("IsDancing",false);
+     //           _anim.SetBool("IsDancing",false);
             }
             
         }
@@ -179,7 +179,6 @@ namespace Noah.Scripts.Player
     //            _anim.SetTrigger("land");
                 _resetTriggerCoroutine = StartCoroutine(Reset());
             }
-            DrawGroundCheck();
         }
         #endregion
         
@@ -433,7 +432,7 @@ namespace Noah.Scripts.Player
         }
         #endregion
         
-        private void DrawGroundCheck()
+        /*private void DrawGroundCheck()
         {
             Color rayColor;
 
@@ -452,7 +451,7 @@ namespace Noah.Scripts.Player
             Debug.DrawRay(
                 _coll.bounds.center - new Vector3(_coll.bounds.extents.x, _coll.bounds.extents.y + extraHeight),
                 Vector2.right * (_coll.bounds.extents.x * 2), rayColor);
-        }
+        }*/
         
         
         private void CheckInput()

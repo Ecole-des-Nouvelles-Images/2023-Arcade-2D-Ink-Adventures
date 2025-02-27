@@ -22,13 +22,13 @@ TagManager:
   - UI
   - Ground
   - Player
+  - ObjectLayer
   - 
-  - ObjectRed
-  - ObjectGreen
-  - ObjectBlue
-  - ObjectCyan
-  - ObjectMagenta
-  - ObjectYellow
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1848341379
+    locked: 0
+  - name: Foreground
+    uniqueID: 1148644701
     locked: 0
   - name: Ground
     uniqueID: 11630721

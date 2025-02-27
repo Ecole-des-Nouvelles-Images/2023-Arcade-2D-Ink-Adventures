@@ -5,8 +5,13 @@ namespace Elias.Scripts.Helper
 {
     public static class ColorHelpers
     {
-        public static bool Collide(Color color, Color otherColor)
+        public static bool Match(Color color, Color otherColor)
         {
+            // Set alpha to 1 for different alpha comparison
+            color.a = 1;
+            otherColor.a = 1;
+            
+            // Color match dictionary
             var colorsDictionary = new Dictionary<(Color, Color), bool>
             {
                 { (Color.red, Color.red), true },
@@ -21,6 +26,7 @@ namespace Elias.Scripts.Helper
                 { (Color.yellow, Color.yellow), true },
                 { (Color.magenta, Color.magenta), true },
                 { (Color.cyan, Color.cyan), true }
+                
             };
 
             return colorsDictionary.ContainsKey((color, otherColor)) ||

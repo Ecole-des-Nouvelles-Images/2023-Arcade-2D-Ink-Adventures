@@ -4,12 +4,14 @@ using Elias.Scripts.Helper;
 using Noah.Scripts.Camera;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace Elias.Scripts.Components
 {
     public class PlayerController : MonoBehaviour
     {
-        [HideInInspector] public bool IsClimbing;
+        [HideInInspector] public static bool IsClimbing;
         [HideInInspector] public bool IsOnPlatform;
         [HideInInspector] public Rigidbody2D PlatformRb;
 
@@ -24,16 +26,13 @@ namespace Elias.Scripts.Components
         private GameObject _leftLeg;
 
         [SerializeField] private GameObject _rightLeg;
-
-        [Header("Ground Check")] [SerializeField]
-        private float extraHeight = 0.25f;
-
+        
         [SerializeField] private LayerMask _whatIsGround;
 
         [Header("Camera")] [SerializeField] private GameObject _cameraFollowGO;
 
         [HideInInspector] public bool IsFacingRight;
-        private Animator _anim;
+        public Animator _anim;
 
         private Light2D _playerLight;
         private CameraFollowObject _cameraFollowObject;
@@ -41,7 +40,6 @@ namespace Elias.Scripts.Components
         private Collider2D _coll;
         private float _fallSpeedYDampingChangeThreshold;
         private RaycastHit2D _groundHit;
-
 
         private bool _isFalling;
         private bool _isGrounded;
@@ -63,10 +61,36 @@ namespace Elias.Scripts.Components
         private Coroutine _resetTriggerCoroutine;
         private readonly float idleThreshold = 5f;
 
+        [HideInInspector] public bool canMove;
+        private float _jumpCooldown = 0.5f; 
+        [HideInInspector] public bool canJump;
+
         private float idleTimer;
+        
+        public static PlayerController Instance;
+
+        public ParticleSystem Part;
+        public bool particuleSystemON =false;
+
+        public AudioClip[] cityFootstepSounds;
+        public AudioClip[] forestFootstepSounds;
+        public AudioClip[] lampSounds;
+        public AudioClip jumpSound;
+        [HideInInspector] public AudioSource audioSource;
+        private int lastFootstepIndex = -1;
+        private int lastLampIndex = -1;
+        public bool isInCity = true;
+
+        public float footstepVolume = 0.3f;
+        public float jumpVolume = 0.5f;
+        public float lampVolume = 0.3f;
+
+        public ParticleSystem feetParticleSystem;
 
         private void Awake() {
             _playerLight = GetComponent<Light2D>();
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
 
 
@@ -80,13 +104,22 @@ namespace Elias.Scripts.Components
             _cameraFollowObject = _cameraFollowGO.GetComponent<CameraFollowObject>();
             StartDirectionCheck();
             _fallSpeedYDampingChangeThreshold = CameraManager.Instance._fallSpeedYDampingChangeThreshold;
+            canMove = true;
+            
+            audioSource = GetComponent<AudioSource>();
+            audioSource.volume = footstepVolume;
+            audioSource.volume = lampVolume;
+            
         }
 
         private void Update()
         {
-            Jump();
-            if (!_isGrounded)
+            if (canMove)
             {
+                if (canJump)
+                {
+                    Jump();
+                }
             }
             
             GrabBox();
@@ -100,8 +133,19 @@ namespace Elias.Scripts.Components
                 CameraManager.Instance.LerpedFromPlayerFalling = false;
                 CameraManager.Instance.LerpYDamping(false);
             }
-
+            
             _anim.SetBool("IsWalking", _moveInputx != 0);
+
+            if (_moveInputx != 0 && _isGrounded && !audioSource.isPlaying)
+            {
+                PlayRandomFootstep();
+                feetParticleSystem.Play();
+            }
+
+            else
+            {
+                feetParticleSystem.Stop();
+            }
 
             _anim.SetBool("IsJumping", _isJumping);
 
@@ -119,12 +163,26 @@ namespace Elias.Scripts.Components
                 idleTimer = 0;
                 _anim.SetBool("IsDancing", false);
             }
+
+            if (!canMove)
+            { 
+                _anim.SetBool("IsWalking", false);
+            }
+
+            if (_isMoving)
+            {
+                particuleSystemON = true;
+            }
+            
         }
 
         private void FixedUpdate()
         {
-            Climb();
-            Move();
+            if (canMove)
+            {
+                Climb();
+                Move();
+            }
         }
 
         #region Jump Function
@@ -136,6 +194,13 @@ namespace Elias.Scripts.Components
                 _isJumping = true;
                 _jumpTimeCounter = _jumpTime;
                 _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+                canJump = false; 
+                StartCoroutine(JumpCooldown());
+            }
+
+            if (InputManager.instance.JumpJustPressed && _isGrounded)
+            {
+                JumpSound();
             }
 
             if (InputManager.instance.JumpBeingHeld)
@@ -167,7 +232,12 @@ namespace Elias.Scripts.Components
             if (!_isJumping && CheckForLand())
                 //            _anim.SetTrigger("land");
                 _resetTriggerCoroutine = StartCoroutine(Reset());
-            DrawGroundCheck();
+        }
+        
+        IEnumerator JumpCooldown()
+        {
+            yield return new WaitForSeconds(_jumpCooldown);
+            canJump = true; 
         }
 
         #endregion
@@ -193,7 +263,7 @@ namespace Elias.Scripts.Components
 
         #endregion
 
-        private void DrawGroundCheck()
+        /*private void DrawGroundCheck()
         {
             Color rayColor;
 
@@ -210,13 +280,14 @@ namespace Elias.Scripts.Components
             Debug.DrawRay(
                 _coll.bounds.center - new Vector3(_coll.bounds.extents.x, _coll.bounds.extents.y + extraHeight),
                 Vector2.right * (_coll.bounds.extents.x * 2), rayColor);
-        }
+        }*/
 
         #region Movement Functions
 
         private void Move()
         {
             _moveInputx = InputManager.instance.MoveInput.x;
+            
             if (_moveInputx > 0 || _moveInputx < 0) TurnCheck();
             if (IsOnPlatform)
             {
@@ -249,9 +320,9 @@ namespace Elias.Scripts.Components
                 _movableBox = other.gameObject;
             }
 
-            if (other.CompareTag("Movable,Ground")) _isGrounded = true;
+            if (other.CompareTag("Movable,Ground")) _isGrounded = true; canJump = true;
 
-            if (other.CompareTag("Ground")) _isGrounded = true;
+            if (other.CompareTag("Ground")) _isGrounded = true; canJump = true;
         }
 
 
@@ -263,6 +334,7 @@ namespace Elias.Scripts.Components
         private void OnCollisionExit2D(Collision2D other)
         {
             if (Tags.CompareTags("Ground", other.gameObject)) _isGrounded = false;
+            canJump = false;
         }
 
         private void GrabBox()
@@ -412,5 +484,85 @@ namespace Elias.Scripts.Components
         }
 
         #endregion
+        
+        void PlayRandomFootstep()
+        {
+            AudioClip[] currentFootstepSounds = isInCity ? cityFootstepSounds : forestFootstepSounds;
+            int randomIndex = GetRandomFootstepIndex(currentFootstepSounds.Length);
+
+            if (randomIndex != -1)
+            {
+                audioSource.clip = currentFootstepSounds[randomIndex];
+                audioSource.Play();
+                lastFootstepIndex = randomIndex;
+            }
+        }
+        
+        public void PlayRandomLampSound()
+        {
+            int randomIndex = GetRandomLampIndex();
+
+            if (randomIndex != -1)
+            {
+                audioSource.clip = lampSounds[randomIndex];
+                audioSource.Play();
+                lastLampIndex = randomIndex;
+            }
+        }
+
+        void JumpSound()
+        {
+            if (jumpSound != null)
+            {
+                audioSource.clip = jumpSound;
+                audioSource.volume = jumpVolume; // Set the volume for the jump sound
+                audioSource.Play();
+                audioSource.volume = footstepVolume; // Reset volume to footstep volume
+            }
+        }
+
+        int GetRandomFootstepIndex(int arrayLength)
+        {
+            if (arrayLength == 0)
+            {
+                Debug.LogWarning("No footstep sounds assigned.");
+                return -1;
+            }
+
+            int randomIndex = Random.Range(0, arrayLength);
+
+            // Ensure the next sound is different from the last one
+            if (arrayLength > 1)
+            {
+                while (randomIndex == lastFootstepIndex)
+                {
+                    randomIndex = Random.Range(0, arrayLength);
+                }
+            }
+
+            return randomIndex;
+        }
+        
+        int GetRandomLampIndex()
+        {
+            if (lampSounds.Length == 0)
+            {
+                Debug.LogWarning("No lamp sounds assigned.");
+                return -1;
+            }
+
+            int randomIndex = Random.Range(0, lampSounds.Length);
+
+            // Ensure the next sound is different from the last one
+            if (lampSounds.Length > 1)
+            {
+                while (randomIndex == lastLampIndex)
+                {
+                    randomIndex = Random.Range(0, lampSounds.Length);
+                }
+            }
+
+            return randomIndex;
+        }
     }
 }

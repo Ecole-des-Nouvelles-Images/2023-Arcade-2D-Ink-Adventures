@@ -1,6 +1,7 @@
 using Noah.Scripts.Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using PlayerController = Elias.Scripts.Components.PlayerController;
 
 public class MenuManager : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _keyboardMenuCanvasGO;
     [SerializeField] private GameObject _gamepadMenuCanvasGO;
 
-    [Header("Player Scripts to Deactivate on Pause")]
-    [SerializeField] private PlayerController player;
 
     [Header("First Selected Options")] 
     [SerializeField] private GameObject _mainMenuFirst;
@@ -53,7 +52,7 @@ public class MenuManager : MonoBehaviour
     {
         _isPaused = true;
         Time.timeScale = 0f;
-        player.enabled = false;
+        PlayerController.Instance.enabled = false;
         OpenMainMenu();
     }
 
@@ -61,9 +60,8 @@ public class MenuManager : MonoBehaviour
     {
         _isPaused = false;
         Time.timeScale = 1f;
-        player.enabled = true;
+        PlayerController.Instance.enabled = true;
         CloseAllMenus();
-
     }
     #endregion
     

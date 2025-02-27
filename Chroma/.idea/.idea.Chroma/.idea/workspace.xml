@@ -4,46 +4,221 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327f0f78-c56b-4abd-91d6-6122790d9453" name="Changes" comment="" />
+    <list default="true" id="327f0f78-c56b-4abd-91d6-6122790d9453" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chroma/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chroma/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elias/Prefabs/Checkpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elias/Prefabs/Checkpoint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elias/Scripts/Components/PlayerColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elias/Scripts/Components/PlayerColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Scenes/EndingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Scenes/EndingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0088_ChromaAnim_Attack_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0088_ChromaAnim_Attack_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0089_ChromaAnim_Attack_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0089_ChromaAnim_Attack_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0090_ChromaAnim_Attack_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0090_ChromaAnim_Attack_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0091_ChromaAnim_Attack_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0091_ChromaAnim_Attack_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0092_ChromaAnim_Attack_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0092_ChromaAnim_Attack_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0093_ChromaAnim_Attack_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0093_ChromaAnim_Attack_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0094_ChromaAnim_Attack_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0094_ChromaAnim_Attack_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0095_ChromaAnim_Attack_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Attack/_0095_ChromaAnim_Attack_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0080_ChromaAnim_Change_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0080_ChromaAnim_Change_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0081_ChromaAnim_Change_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0081_ChromaAnim_Change_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0082_ChromaAnim_Change_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0082_ChromaAnim_Change_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0083_ChromaAnim_Change_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0083_ChromaAnim_Change_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0084_ChromaAnim_Change_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0084_ChromaAnim_Change_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0085_ChromaAnim_Change_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0085_ChromaAnim_Change_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0086_ChromaAnim_Change_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0086_ChromaAnim_Change_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0087_ChromaAnim_Change_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Change/_0087_ChromaAnim_Change_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0072_ChromaAnim_Climb_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0072_ChromaAnim_Climb_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0073_ChromaAnim_Climb_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0073_ChromaAnim_Climb_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0074_ChromaAnim_Climb_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0074_ChromaAnim_Climb_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0075_ChromaAnim_Climb_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0075_ChromaAnim_Climb_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0076_ChromaAnim_Climb_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0076_ChromaAnim_Climb_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0077_ChromaAnim_Climb_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0077_ChromaAnim_Climb_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0078_ChromaAnim_Climb_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0078_ChromaAnim_Climb_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0079_ChromaAnim_Climb_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Climb/_0079_ChromaAnim_Climb_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0056_ChromaAnim_Dance_0015.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0056_ChromaAnim_Dance_0015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0057_ChromaAnim_Dance_0014.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0057_ChromaAnim_Dance_0014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0058_ChromaAnim_Dance_0013.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0058_ChromaAnim_Dance_0013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0059_ChromaAnim_Dance_0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0059_ChromaAnim_Dance_0012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0060_ChromaAnim_Dance_0011.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0060_ChromaAnim_Dance_0011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0061_ChromaAnim_Dance_0010.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0061_ChromaAnim_Dance_0010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0062_ChromaAnim_Dance_0009.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0062_ChromaAnim_Dance_0009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0063_ChromaAnim_Dance_0008.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0063_ChromaAnim_Dance_0008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0064_ChromaAnim_Dance_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0064_ChromaAnim_Dance_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0065_ChromaAnim_Dance_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0065_ChromaAnim_Dance_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0066_ChromaAnim_Dance_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0066_ChromaAnim_Dance_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0067_ChromaAnim_Dance_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0067_ChromaAnim_Dance_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0068_ChromaAnim_Dance_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0068_ChromaAnim_Dance_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0069_ChromaAnim_Dance_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0069_ChromaAnim_Dance_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0070_ChromaAnim_Dance_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0070_ChromaAnim_Dance_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0071_ChromaAnim_Dance_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Dance/_0071_ChromaAnim_Dance_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0048_ChromaAnim_Fall_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0048_ChromaAnim_Fall_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0049_ChromaAnim_Fall_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0049_ChromaAnim_Fall_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0050_ChromaAnim_Fall_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0050_ChromaAnim_Fall_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0051_ChromaAnim_Fall_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0051_ChromaAnim_Fall_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0052_ChromaAnim_Fall_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0052_ChromaAnim_Fall_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0053_ChromaAnim_Fall_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0053_ChromaAnim_Fall_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0054_ChromaAnim_Fall_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0054_ChromaAnim_Fall_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0055_ChromaAnim_Fall_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Fall/_0055_ChromaAnim_Fall_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0040_ChromaAnim_Idle_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0040_ChromaAnim_Idle_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0040_ChromaAnim_Idle_0006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0040_ChromaAnim_Idle_0006.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0041_ChromaAnim_Idle_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0041_ChromaAnim_Idle_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0041_ChromaAnim_Idle_0005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0041_ChromaAnim_Idle_0005.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0042_ChromaAnim_Idle_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0042_ChromaAnim_Idle_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0042_ChromaAnim_Idle_0004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0042_ChromaAnim_Idle_0004.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0043_ChromaAnim_Idle_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0043_ChromaAnim_Idle_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0043_ChromaAnim_Idle_0003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0043_ChromaAnim_Idle_0003.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0044_ChromaAnim_Idle_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0044_ChromaAnim_Idle_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0044_ChromaAnim_Idle_0002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0044_ChromaAnim_Idle_0002.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0045_ChromaAnim_Idle_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0045_ChromaAnim_Idle_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0045_ChromaAnim_Idle_0001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0045_ChromaAnim_Idle_0001.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0046_ChromaAnim_Idle_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0046_ChromaAnim_Idle_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0046_ChromaAnim_Idle_0000.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0046_ChromaAnim_Idle_0000.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0047_ChromaAnim_Idle_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0047_ChromaAnim_Idle_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0047_ChromaAnim_Idle_0007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Idle/_0047_ChromaAnim_Idle_0007.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0032_ChromaAnim_Jump_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0032_ChromaAnim_Jump_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0033_ChromaAnim_Jump_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0033_ChromaAnim_Jump_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0034_ChromaAnim_Jump_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0034_ChromaAnim_Jump_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0035_ChromaAnim_Jump_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0035_ChromaAnim_Jump_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0036_ChromaAnim_Jump_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0036_ChromaAnim_Jump_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0037_ChromaAnim_Jump_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0037_ChromaAnim_Jump_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0038_ChromaAnim_Jump_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0038_ChromaAnim_Jump_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0039_ChromaAnim_Jump_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Jump/_0039_ChromaAnim_Jump_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0024_ChromaAnim_Pull_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0024_ChromaAnim_Pull_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0025_ChromaAnim_Pull_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0025_ChromaAnim_Pull_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0026_ChromaAnim_Pull_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0026_ChromaAnim_Pull_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0027_ChromaAnim_Pull_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0027_ChromaAnim_Pull_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0028_ChromaAnim_Pull_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0028_ChromaAnim_Pull_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0029_ChromaAnim_Pull_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0029_ChromaAnim_Pull_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0030_ChromaAnim_Pull_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0030_ChromaAnim_Pull_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0031_ChromaAnim_Pull_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Pull/_0031_ChromaAnim_Pull_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0016_ChromaAnim_Push_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0016_ChromaAnim_Push_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0017_ChromaAnim_Push_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0017_ChromaAnim_Push_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0018_ChromaAnim_Push_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0018_ChromaAnim_Push_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0019_ChromaAnim_Push_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0019_ChromaAnim_Push_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0020_ChromaAnim_Push_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0020_ChromaAnim_Push_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0021_ChromaAnim_Push_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0021_ChromaAnim_Push_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0022_ChromaAnim_Push_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0022_ChromaAnim_Push_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0023_ChromaAnim_Push_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Push/_0023_ChromaAnim_Push_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0008_ChromaAnim_Respawn_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0008_ChromaAnim_Respawn_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0009_ChromaAnim_Respawn_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0009_ChromaAnim_Respawn_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0010_ChromaAnim_Respawn_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0010_ChromaAnim_Respawn_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0011_ChromaAnim_Respawn_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0011_ChromaAnim_Respawn_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0012_ChromaAnim_Respawn_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0012_ChromaAnim_Respawn_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0013_ChromaAnim_Respawn_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0013_ChromaAnim_Respawn_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0014_ChromaAnim_Respawn_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0014_ChromaAnim_Respawn_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0015_ChromaAnim_Respawn_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Respawn/_0015_ChromaAnim_Respawn_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0000_ChromaAnim_Walk_0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0000_ChromaAnim_Walk_0006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0001_ChromaAnim_Walk_0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0001_ChromaAnim_Walk_0005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0002_ChromaAnim_Walk_0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0002_ChromaAnim_Walk_0004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0003_ChromaAnim_Walk_0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0003_ChromaAnim_Walk_0003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0004_ChromaAnim_Walk_0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0004_ChromaAnim_Walk_0002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0005_ChromaAnim_Walk_0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0005_ChromaAnim_Walk_0001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0006_ChromaAnim_Walk_0000.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0006_ChromaAnim_Walk_0000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0007_ChromaAnim_Walk_0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaAnim/Walk/_0007_ChromaAnim_Walk_0007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hand_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_11.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/ChromaCustom_Hat_11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesClosed_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_07.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_08.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_09.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/Chroma/ChromaCustom/Chroma_Custom_EyesOpened_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Giulia/Sprites/UI/Kitchen SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Giulia/Sprites/UI/Kitchen SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PROD/Scenes/MainMenuFINAL.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PROD/Scenes/MainMenuFINAL.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PROD/Scenes/Niveau1Final.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PROD/Scenes/Niveau1Final.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PROD/Scenes/Niveau3Final.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PROD/Scenes/Niveau3Final.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PROD/Scenes/PersistentGameplayFINAL.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PROD/Scenes/PersistentGameplayFINAL.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/CharacterCustomization/OutfitChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Camera/CameraControlTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Input/ResetDeviceBindings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Sound/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Camera/CameraFollowObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/CharacterCustomization/OutfitChanger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Checkpoint/Checkpoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Data/ChildObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Input/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Input/ResetDeviceBindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Interactor/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Menu/CustomizeMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Platform/MovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Player/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Data/ChildObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Checkpoint/Checkpoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Platform/MovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Sound/SoundMixerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/WhiteFlash/WhiteFlash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PROD/Scripts/Ending.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Interactor/Interactor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Noah/Scripts/Input/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.8/Runtime/2D/Light2DManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.8/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2Yo2GfLuCRo1JsB8w4zI45iRK6q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\e.prevost\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\e.prevost\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\e.prevost\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Unity.exe" />
@@ -117,8 +292,14 @@
       <workItem from="1702934586612" duration="4104000" />
       <workItem from="1702975352586" duration="390000" />
       <workItem from="1702978362428" duration="4151000" />
-      <workItem from="1703012413954" duration="17000" />
-      <workItem from="1703012448886" duration="179000" />
+      <workItem from="1702987770942" duration="5492000" />
+      <workItem from="1703019973404" duration="2250000" />
+      <workItem from="1703025768869" duration="7223000" />
+      <workItem from="1703060496414" duration="18528000" />
+      <workItem from="1703103921611" duration="5102000" />
+      <workItem from="1703152627349" duration="10148000" />
+      <workItem from="1703181408807" duration="315000" />
+      <workItem from="1703187499631" duration="5001000" />
     </task>
     <servers />
   </component>
@@ -138,7 +319,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
