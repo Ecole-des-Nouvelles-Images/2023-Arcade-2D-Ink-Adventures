@@ -7,11 +7,13 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         public static PlayerMovement Instance;
-        [Header("References")] public PlayerMovementStats MovementStats;
+        [Header("References")] 
+        public PlayerMovementStats MovementStats;
         [SerializeField] private Collider2D _feetCollider;
         [SerializeField] private Collider2D _bodyCollider;
 
         private Rigidbody2D _rb;
+        private Animator _animator;
 
         private Vector2 _moveVelocity;
         private bool _isFacingRight;
@@ -51,6 +53,8 @@ namespace Player
 
             _isFacingRight = true;
             _rb = GetComponent<Rigidbody2D>();
+            _animator = GetComponentInChildren<Animator>();
+
         }
 
         private void FixedUpdate()
@@ -66,12 +70,19 @@ namespace Player
             {
                 Move(MovementStats.AirAcceleration, MovementStats.AirDeceleration, InputManager.Movement);
             }
+            
+            _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
+            _animator.SetFloat("yVelocity", _rb.velocity.y);
+
         }
 
         private void Update()
         {
             CountTimers();
             JumpChecks();
+            
+            _animator.SetBool("isJumping", _isJumping);
+
         }
 
         #region Movement

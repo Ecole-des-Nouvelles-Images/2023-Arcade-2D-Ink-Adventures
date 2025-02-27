@@ -4046,7 +4046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178495206}
   m_Layer: 0
-  m_Name: Head
+  m_Name: _Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4673,7 +4673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 200876146}
   m_Layer: 0
-  m_Name: Neck
+  m_Name: _Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10685,7 +10685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 255820008}
   m_Layer: 0
-  m_Name: Torso + Legs
+  m_Name: _Torso + Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20266,7 +20266,7 @@ GameObject:
   - component: {fileID: 669059106}
   - component: {fileID: 669059107}
   m_Layer: 0
-  m_Name: ChromaCustom_Neck_03
+  m_Name: ChromaAnim_Idle_0000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21243,7 +21243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701357223}
   m_Layer: 0
-  m_Name: Back
+  m_Name: _Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30410,7 +30410,7 @@ Animator:
   m_GameObject: {fileID: 1227420450}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35f35c59525fbe943a4234382125a027, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2e879ac09ff00f54ea2ec14cc90be587, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -33226,7 +33226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370948828}
   m_Layer: 0
-  m_Name: Hands
+  m_Name: ___Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
