@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Elias.Scripts.Helper;
 using Helper;
 using Input;
 using Player;
@@ -12,7 +11,6 @@ namespace Components
     public class PlayerColor : MonoBehaviour {
         
         public List<Color> switchableColors = new List<Color>();
-        [SerializeField] private Image _UIBulb;
         private Light2D _playerLight;
         private List<PropBehavior> _propColorColliders = new List<PropBehavior>();
         
@@ -23,10 +21,6 @@ namespace Components
         
         private void Update() {
             InputSwitchColor();
-            if (_UIBulb != null)
-            {
-                _UIBulb.color = _playerLight.color;
-            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)

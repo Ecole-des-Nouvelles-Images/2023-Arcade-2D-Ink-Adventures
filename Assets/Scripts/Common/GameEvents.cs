@@ -7,6 +7,9 @@ namespace Common
     {
         // Color Change
         public static Action<Color> OnColorChanged;
+        
+        // Player Death
+        public static Action OnPlayerDeath;
 
     }
 }

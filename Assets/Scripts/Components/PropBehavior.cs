@@ -4,24 +4,39 @@ using Player;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+public enum StartColor
+{
+    Red,
+    Blue,
+    Green,
+    Magenta,
+    Yellow,
+    Cyan
+}
+
 namespace Components
 {
     public class PropBehavior : MonoBehaviour
     {
+        [SerializeField] private StartColor _startColor;
         [SerializeField] private float _disabledOpacity = 0.5f;
-
-        private List<SpriteRenderer> _spriteRendererList;
-        private BoxCollider2D _boxCollider2D;
+        
+        private List<SpriteRenderer> _spriteRenderersList;
+        private List<BoxCollider2D> _boxColliders2DList;
         private Light2D _playerLight;
-        private float _startOpacity;
 
         private void Awake()
         {
-            _spriteRendererList = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
-            _boxCollider2D = GetComponent<BoxCollider2D>();
-            if (_spriteRendererList.Count > 0)
+            _spriteRenderersList = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
+            _boxColliders2DList = new List<BoxCollider2D>(GetComponentsInChildren<BoxCollider2D>());
+
+            if (_spriteRenderersList.Count > 0)
             {
-                _startOpacity = _spriteRendererList[0].color.a;
+                Color initialColor = GetColorFromEnum(_startColor);
+                foreach (var spriteRenderer in _spriteRenderersList)
+                {
+                    spriteRenderer.color = initialColor;
+                }
             }
         }
 
@@ -32,16 +47,41 @@ namespace Components
 
         private void Update()
         {
-            bool isMatching = false;
+            if (_playerLight == null) return;
 
-            foreach (var spriteRenderer in _spriteRendererList)
+            bool isMatching = false;
+            
+            foreach (SpriteRenderer spriteRenderer in _spriteRenderersList)
             {
                 Color propColor = spriteRenderer.color;
-                isMatching = ColorHelpers.Match(propColor, _playerLight.color);
-                spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, isMatching ? _startOpacity : _disabledOpacity);
+                bool match = ColorHelpers.Match(propColor, _playerLight.color);
+
+                if (match)
+                {
+                    isMatching = true;
+                }
+
+                spriteRenderer.color = new Color(propColor.r, propColor.g, propColor.b, match ? 1f : _disabledOpacity);
             }
-            
-            _boxCollider2D.enabled = isMatching;
+
+            foreach (BoxCollider2D boxCollider2D in _boxColliders2DList)
+            {
+                boxCollider2D.enabled = isMatching;
+            }
+        }
+        
+        private Color GetColorFromEnum(StartColor color)
+        {
+            return color switch
+            {
+                StartColor.Red => Color.red,
+                StartColor.Blue => Color.blue,
+                StartColor.Green => Color.green,
+                StartColor.Magenta => Color.magenta,
+                StartColor.Yellow => Color.yellow,
+                StartColor.Cyan => Color.cyan,
+                _ => Color.white
+            };
         }
     }
 }
