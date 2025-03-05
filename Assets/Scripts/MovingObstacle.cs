@@ -6,37 +6,36 @@ using UnityEngine.Serialization;
 
 public class MovingObstacle : MonoBehaviour
 {
+    [SerializeField] private GameObject _obstacle;
+    [SerializeField] private Transform[] _wayPoints;
+
     [Range(0,5)]
     [SerializeField] private float _speed;
     
     [Range(0,2)]
-    [SerializeField] private float waitDuration;
-    
-    [SerializeField] private GameObject ways;
-    [SerializeField] private Transform[] wayPoints;
+    [SerializeField] private float _waitDuration;
     
     private Vector3 _targetPos;
     private int _pointIndex;
     private int _pointCount;
     private int _direction = 1;
-    
-    private float speedMultiplier = 1;
+    private float _speedMultiplier = 1;
 
+    private bool _isWaiting;
     private void Awake()
     {
-        _pointCount = wayPoints.Length;
-        _pointIndex = 1;
-        _targetPos = wayPoints[_pointIndex].transform.position;
+        _pointCount = _wayPoints.Length;
+        _targetPos = _wayPoints[_pointIndex].transform.position;
     }
 
     private void Update()
     {
-        var step = speedMultiplier * _speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, _targetPos, step);
+        var step = _speedMultiplier * _speed * Time.deltaTime;
+        _obstacle.transform.position = Vector2.MoveTowards(_obstacle.transform.position, _targetPos, step);
 
-        if (transform.position == _targetPos)
+        if (Vector2.Distance(_obstacle.transform.position, _targetPos) < 0.01f && !_isWaiting)
         {
-            NextPoint();
+            StartCoroutine(WaitNextPoint());
         }
     }
 
@@ -53,13 +52,16 @@ public class MovingObstacle : MonoBehaviour
         }
 
         _pointIndex += _direction;
-        _targetPos = wayPoints[_pointIndex].transform.position;
+        _targetPos = _wayPoints[_pointIndex].transform.position;
     }
 
     IEnumerator WaitNextPoint()
     {
-        speedMultiplier = 0;
-        yield return new WaitForSeconds(waitDuration);
-        speedMultiplier = 1;
+        _isWaiting = true;
+        _speedMultiplier = 0;
+        yield return new WaitForSeconds(_waitDuration);
+        _speedMultiplier = 1;
+        NextPoint();
+        _isWaiting = false;
     }
 }

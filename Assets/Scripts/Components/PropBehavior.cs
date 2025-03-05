@@ -27,8 +27,23 @@ namespace Components
 
         private void Awake()
         {
-            _spriteRenderersList = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
-            _boxColliders2DList = new List<BoxCollider2D>(GetComponentsInChildren<BoxCollider2D>());
+            _spriteRenderersList = new List<SpriteRenderer>();
+            _boxColliders2DList = new List<BoxCollider2D>();
+
+            foreach (Transform child in transform)
+            {
+                SpriteRenderer spriteRenderer = child.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    _spriteRenderersList.Add(spriteRenderer);
+                }
+
+                BoxCollider2D boxCollider2D = child.GetComponent<BoxCollider2D>();
+                if (boxCollider2D != null)
+                {
+                    _boxColliders2DList.Add(boxCollider2D);
+                }
+            }
 
             if (_spriteRenderersList.Count > 0)
             {

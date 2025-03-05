@@ -40,6 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2453721470294053429}
+  - component: {fileID: 9108882681417175809}
+  - component: {fileID: 4298272412497817284}
   m_Layer: 6
   m_Name: MovingPlatform
   m_TagString: Untagged
@@ -64,6 +66,39 @@ Transform:
   - {fileID: 8623450156907368992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9108882681417175809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295214175417234453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startColor: 0
+  _disabledOpacity: 0.5
+--- !u!114 &4298272412497817284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295214175417234453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4db4a61e6718449a74c2605f592fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstacle: {fileID: 1997177633424982726}
+  _wayPoints:
+  - {fileID: 943003876385848215}
+  - {fileID: 1684358320060488783}
+  - {fileID: 2586833631725660396}
+  _speed: 2.5
+  _waitDuration: 1
 --- !u!1 &1997177633424982726
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,9 +110,6 @@ GameObject:
   - component: {fileID: 2996600647062904468}
   - component: {fileID: 5568694340464718435}
   - component: {fileID: 158191611017042913}
-  - component: {fileID: 8770364487923838586}
-  - component: {fileID: 6905677160723856834}
-  - component: {fileID: 5700016869524217646}
   m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
@@ -95,7 +127,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2453721470294053429}
@@ -141,8 +173,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8c43dd700ac86e84e90653dc700d698a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -188,7 +220,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 8.58, y: 3.15}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -197,62 +229,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9547069, y: 0.18849862}
   m_EdgeRadius: 0
---- !u!50 &8770364487923838586
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997177633424982726}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &6905677160723856834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997177633424982726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed331dc0d94b4d4fad7b0f2e68ef065, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  ways: {fileID: 9170056020220703153}
-  wayPoints: []
-  waitDuration: 0.5
---- !u!114 &5700016869524217646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997177633424982726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8f5b5067de8b144b59dc9c8c7af4e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _disabledOpacity: 0
 --- !u!1 &7440956589455561144
 GameObject:
   m_ObjectHideFlags: 0

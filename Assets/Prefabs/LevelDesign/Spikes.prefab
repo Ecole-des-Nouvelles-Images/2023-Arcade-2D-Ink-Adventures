@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1989754801784320827}
   - component: {fileID: 3670339702282359941}
+  - component: {fileID: 4958947778205061278}
   m_Layer: 8
   m_Name: Spikes
   m_TagString: Obstacle
@@ -79,6 +80,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startColor: 0
   _disabledOpacity: 0.5
+--- !u!114 &4958947778205061278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692537922025053801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4db4a61e6718449a74c2605f592fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstacle: {fileID: 8160410060448695534}
+  _wayPoints:
+  - {fileID: 984793430905934994}
+  - {fileID: 9095898723228989731}
+  _speed: 2.5
+  _waitDuration: 1
 --- !u!1 &4951380315253643721
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2973684517644794600}
   - component: {fileID: 5274887237137625794}
-  - component: {fileID: 4468261785333443599}
   - component: {fileID: 5423042244487867664}
   m_Layer: 8
   m_Name: Obstacle
@@ -229,24 +247,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4468261785333443599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8160410060448695534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4db4a61e6718449a74c2605f592fce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 1
-  waitDuration: 1.5
-  ways: {fileID: 5475609012174468507}
-  wayPoints:
-  - {fileID: 984793430905934994}
-  - {fileID: 9095898723228989731}
 --- !u!61 &5423042244487867664
 BoxCollider2D:
   m_ObjectHideFlags: 0
