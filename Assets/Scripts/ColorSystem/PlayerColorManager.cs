@@ -21,11 +21,10 @@ namespace ChangeColor
         public void ChangeColor(Color newColor)
         {
             if (_playerLight == null) return;
-            if (SwitchableColors.Contains(newColor))
-            {
-                _playerLight.color = newColor;
-                GameEvents.OnColorChanged?.Invoke(newColor);
-            }
+            if (!SwitchableColors.Contains(newColor)) return;
+            Debug.Log("test");
+            _playerLight.color = newColor;
+            GameEvents.OnColorChanged?.Invoke(newColor);
         }
     }
 }

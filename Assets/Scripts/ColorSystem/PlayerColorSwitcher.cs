@@ -22,16 +22,19 @@ namespace ChangeColor
         {
             if (InputManager.RedLightButtonWasPressed)
             {
+                Debug.Log("Red light");
                 SubmitColorChange(Color.red,InputManager.GreenLightButtonIsHeld, Color.yellow, InputManager.BlueLightButtonIsHeld, Color.magenta);
             }
             
             if (InputManager.BlueLightButtonWasPressed)
             {
+                Debug.Log("Blue light");
                 SubmitColorChange(Color.blue, InputManager.RedLightButtonIsHeld, Color.magenta, InputManager.GreenLightButtonIsHeld, Color.cyan);
             }
 
             if (InputManager.GreenLightButtonWasPressed)
             {
+                Debug.Log("Green light");
                 SubmitColorChange(Color.green, InputManager.BlueLightButtonIsHeld, Color.cyan, InputManager.RedLightButtonIsHeld, Color.yellow);
             }
         }
