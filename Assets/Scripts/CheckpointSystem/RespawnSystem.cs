@@ -7,8 +7,6 @@ namespace CheckpointSystem
 {
     public class RespawnSystem : MonoBehaviour
     {
-        [SerializeField] private float _respawnTime = 3f;
-
         private void OnEnable()
         {
             GameEvents.OnPlayerDeath += RespawnPlayer;
@@ -21,6 +19,7 @@ namespace CheckpointSystem
         void RespawnPlayer()
         {
             Transform respawnCheckpoint = CheckpointManager.Instance.GetLastCheckpoint();
+            Debug.Log(respawnCheckpoint.position);
             PlayerMovement.Instance.transform.position = respawnCheckpoint.position;
         }
     }
