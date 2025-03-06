@@ -1,7 +1,7 @@
 using Input;
 using UnityEngine;
 
-namespace ChangeColor
+namespace ColorSystem
 {
     public class PlayerColorSwitcher : MonoBehaviour
     {
@@ -12,7 +12,6 @@ namespace ChangeColor
             _colorManager = GetComponent<PlayerColorManager>();
         }
 
-
         private void Update()
         {
             HandleColorSwitchInput();
@@ -20,44 +19,35 @@ namespace ChangeColor
 
         private void HandleColorSwitchInput()
         {
-            if (InputManager.RedLightButtonWasPressed)
+            if (InputManager.RedLightButtonWasPressed && !InputManager.BlueLightButtonIsHeld && !InputManager.GreenLightButtonIsHeld)
             {
-                Debug.Log("Red light");
-                SubmitColorChange(Color.red,InputManager.GreenLightButtonIsHeld, Color.yellow, InputManager.BlueLightButtonIsHeld, Color.magenta);
+                _colorManager.ChangeColor(Color.red);
             }
             
-            if (InputManager.BlueLightButtonWasPressed)
+            if (InputManager.BlueLightButtonWasPressed && !InputManager.RedLightButtonIsHeld && !InputManager.GreenLightButtonIsHeld)
             {
-                Debug.Log("Blue light");
-                SubmitColorChange(Color.blue, InputManager.RedLightButtonIsHeld, Color.magenta, InputManager.GreenLightButtonIsHeld, Color.cyan);
+                _colorManager.ChangeColor(Color.blue);
             }
-
+            
             if (InputManager.GreenLightButtonWasPressed)
             {
-                Debug.Log("Green light");
-                SubmitColorChange(Color.green, InputManager.BlueLightButtonIsHeld, Color.cyan, InputManager.RedLightButtonIsHeld, Color.yellow);
+                _colorManager.ChangeColor(Color.green);
             }
-        }
 
-        private void SubmitColorChange(Color defaultColor, bool secondKey, Color colorIfBothPressed, bool thirdKey, Color colorIfThirdPressed)
-        {
-            Color newColor = defaultColor;
-            if (secondKey && CanMixColors(defaultColor, colorIfBothPressed))
+            if ((InputManager.RedLightButtonWasPressed || InputManager.RedLightButtonIsHeld) && (InputManager.BlueLightButtonWasPressed || InputManager.BlueLightButtonIsHeld))
             {
-                newColor = colorIfBothPressed;
+                _colorManager.ChangeColor(Color.magenta);
             }
-            else if (thirdKey && CanMixColors(defaultColor, colorIfThirdPressed))
+            
+            if ((InputManager.RedLightButtonWasPressed || InputManager.RedLightButtonIsHeld) && (InputManager.GreenLightButtonIsHeld || InputManager.GreenLightButtonIsHeld))
             {
-                newColor = colorIfThirdPressed;
+                _colorManager.ChangeColor(Color.yellow);
+            }            
+            
+            if ((InputManager.BlueLightButtonWasPressed || InputManager.BlueLightButtonIsHeld) && (InputManager.GreenLightButtonIsHeld || InputManager.GreenLightButtonIsHeld))
+            {
+                _colorManager.ChangeColor(Color.cyan);
             }
-            _colorManager.ChangeColor(newColor);
-        }
-
-        private bool CanMixColors(Color color1, Color color2)
-        {
-            return (color1 == Color.red && color2 == Color.blue) ||
-                   (color1 == Color.green && color2 == Color.blue) ||
-                   (color1 == Color.red && color2 == Color.green);
         }
     }
 }

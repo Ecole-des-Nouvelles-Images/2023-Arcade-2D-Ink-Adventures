@@ -77,9 +77,9 @@ namespace Input
             RedLightJustPressed = _redLightAction.WasPerformedThisFrame();
             BlueLightJustPressed = _blueLightAction.WasPerformedThisFrame();
             GreenLightJustPressed = _greenLightAction.WasPerformedThisFrame();
-            RedLightBeingHeld = _redLightAction.IsInProgress();
-            BlueLightBeingHeld = _blueLightAction.IsInProgress();
-            GreenLightBeingHeld = _greenLightAction.IsInProgress();
+            RedLightBeingHeld = _redLightAction.IsPressed();
+            BlueLightBeingHeld = _blueLightAction.IsPressed();
+            GreenLightBeingHeld = _greenLightAction.IsPressed();
         }
     }
 }

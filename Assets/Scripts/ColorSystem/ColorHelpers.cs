@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Helper
+namespace ColorSystem
 {
     public static class ColorHelpers
     {

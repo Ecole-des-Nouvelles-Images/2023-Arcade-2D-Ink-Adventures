@@ -53,7 +53,6 @@ namespace Input
             BlueLightButtonIsHeld = _blueLightAction.IsInProgress();
             GreenLightButtonIsHeld = _greenLightAction.IsInProgress();
 
-
         }
         
     }
