@@ -1,4 +1,5 @@
 using System;
+using Common;
 using Input;
 using UnityEngine;
 
@@ -7,8 +8,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         public static PlayerMovement Instance;
-        [Header("References")] 
-        public PlayerMovementStats MovementStats;
+        [Header("References")] public PlayerMovementStats MovementStats;
         [SerializeField] private Collider2D _feetCollider;
         [SerializeField] private Collider2D _bodyCollider;
 
@@ -22,6 +22,9 @@ namespace Player
         private RaycastHit2D _headHit;
         private bool _isGrounded;
         private bool _bumpedHead;
+        public bool _isClimbing;
+        public bool _isOnLadder;
+
 
         public float VerticalVelocity { get; private set; }
         private bool _isJumping;
@@ -40,6 +43,16 @@ namespace Player
 
         private float _coyoteTimer;
 
+        private void OnEnable()
+        {
+            GameEvents.OnPlayerClimb += LockClimb;
+        }
+
+        private void OnDisable()
+        {
+            GameEvents.OnPlayerClimb -= LockClimb;
+        }
+
         private void Awake()
         {
             if (Instance == null)
@@ -54,7 +67,6 @@ namespace Player
             _isFacingRight = true;
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponentInChildren<Animator>();
-
         }
 
         private void FixedUpdate()
@@ -66,14 +78,18 @@ namespace Player
             {
                 Move(MovementStats.GroundAcceleration, MovementStats.GroundDeceleration, InputManager.Movement);
             }
+
+            if (_isClimbing)
+            {
+                Climb(MovementStats.LadderAcceleration, MovementStats.LadderDeceleration, InputManager.Movement);
+            }
             else
             {
                 Move(MovementStats.AirAcceleration, MovementStats.AirDeceleration, InputManager.Movement);
             }
-            
-            _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
-            _animator.SetFloat("yVelocity", _rb.velocity.y);
 
+            _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
+            _animator.SetFloat("yVelocity", Math.Abs(_rb.velocity.y));
         }
 
         private void Update()
@@ -110,6 +126,31 @@ namespace Player
             }
         }
 
+        private void Climb(float acceleration, float deceleration, Vector2 moveInput)
+        {
+            if (moveInput != Vector2.zero)
+            {
+                TurnCheck(moveInput);
+                Vector2 targetVelocity = Vector2.zero;
+                
+                targetVelocity = new Vector2(0f, moveInput.y) * MovementStats.MaxClimbSpeed;
+                
+                _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+                _rb.velocity = new Vector2(_rb.velocity.x, _moveVelocity.y);
+            }
+            else if (moveInput == Vector2.zero)
+            {
+                _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+                _rb.velocity = new Vector2(_rb.velocity.x, _moveVelocity.y);
+            }
+        }
+
+        private void LockClimb(Transform ladderTrasnform)
+        {
+            Debug.Log("LockClimb");
+            transform.position = new Vector2(ladderTrasnform.position.x, transform.position.y);
+        }
+        
         private void TurnCheck(Vector2 moveInput)
         {
             if (_isFacingRight && moveInput.x < 0)
@@ -254,13 +295,14 @@ namespace Player
                         }
                     }
                 }
-                
+
                 // GRAVITY ON DESCENDING
                 else if (!_isFastFalling)
                 {
-                    VerticalVelocity += MovementStats.Gravity * MovementStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+                    VerticalVelocity += MovementStats.Gravity * MovementStats.GravityOnReleaseMultiplier *
+                                        Time.fixedDeltaTime;
                 }
-                else if(VerticalVelocity < 0)
+                else if (VerticalVelocity < 0)
                 {
                     if (!_isFalling)
                     {
@@ -292,7 +334,7 @@ namespace Player
                 {
                     _isFalling = true;
                 }
-                
+
                 VerticalVelocity += MovementStats.Gravity * Time.fixedDeltaTime;
             }
 
@@ -389,7 +431,8 @@ namespace Player
             Vector2 boxCastOrigin = new Vector2(_bodyCollider.bounds.center.x, _bodyCollider.bounds.max.y);
 
             // Ajustez la taille du BoxCast pour correspondre à la largeur de la tête
-            Vector2 boxCastSize = new Vector2(_bodyCollider.bounds.size.x * MovementStats.HeadWidth, MovementStats.HeadDetectionRayLength);
+            Vector2 boxCastSize = new Vector2(_bodyCollider.bounds.size.x * MovementStats.HeadWidth,
+                MovementStats.HeadDetectionRayLength);
 
             _headHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.up,
                 MovementStats.HeadDetectionRayLength, MovementStats.GroundLayer);

@@ -1,13 +1,26 @@
+using System;
+using System.Collections.Generic;
+using Common;
 using Components;
+using Player;
 using UnityEngine;
 public class Ladder : MonoBehaviour
 {
-    
-    private void OnTriggerEnter2D(Collider2D other)
+    private List<BoxCollider2D> _boxColliders2DList;
+    [SerializeField] private bool _lockPlayerToLadder; 
+
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.Instance.IsClimbing= true;
+            PlayerMovement.Instance._isClimbing = true;
+            PlayerMovement.Instance._isOnLadder = true;
+
+            if (_lockPlayerToLadder)
+            {
+                GameEvents.OnPlayerClimb.Invoke(this.gameObject.transform);
+            }
+
         }        
     }
 
@@ -15,7 +28,14 @@ public class Ladder : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerController.Instance.IsClimbing = false;
+            PlayerMovement.Instance._isClimbing = false;
+            PlayerMovement.Instance._isOnLadder = false;
+            
+            if (_lockPlayerToLadder)
+            {
+                GameEvents.OnPlayerStopClimb.Invoke(this.gameObject.transform);
+            }
+
         }  
     }
 }

@@ -17,6 +17,12 @@ namespace Player
          * [Header("Run")]
          * [Range(1f, 100f)] public float MaxRunSpeed = 20f;
          */
+        
+        [Header("Climb")]
+        [Range(1f, 100f)] public float MaxClimbSpeed = 10f;
+        [Range(0.25f, 50)] public float LadderAcceleration = 5f;
+        [Range(0.25f, 50)] public float LadderDeceleration = 20f;
+
 
         [Header("Grounded/Collision Checks")]
         public LayerMask GroundLayer;

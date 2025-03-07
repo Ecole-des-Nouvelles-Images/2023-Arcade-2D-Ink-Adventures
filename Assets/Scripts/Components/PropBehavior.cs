@@ -82,6 +82,7 @@ namespace Components
             foreach (BoxCollider2D boxCollider2D in _boxColliders2DList)
             {
                 boxCollider2D.enabled = isMatching;
+                
             }
         }
         

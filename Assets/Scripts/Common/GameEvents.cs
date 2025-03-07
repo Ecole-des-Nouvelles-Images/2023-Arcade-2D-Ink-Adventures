@@ -10,6 +10,11 @@ namespace Common
         
         // Player Death
         public static Action OnPlayerDeath;
+        
+        // Player Climbing
+        public static Action<Transform> OnPlayerClimb;
+        public static Action<Transform> OnPlayerStopClimb;
+
 
     }
 }
