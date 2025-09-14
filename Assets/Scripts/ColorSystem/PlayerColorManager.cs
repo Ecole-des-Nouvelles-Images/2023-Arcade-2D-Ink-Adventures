@@ -42,5 +42,10 @@ namespace ColorSystem
 
             return false;
         }
+        
+        public bool CanMixColorPublic(Color color)
+        {
+            return CanMixColor(color);
+        }
     }
 }
