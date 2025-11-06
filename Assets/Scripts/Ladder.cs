@@ -18,7 +18,7 @@ public class Ladder : MonoBehaviour
 
             if (_lockPlayerToLadder)
             {
-                GameEvents.OnPlayerClimb.Invoke(this.gameObject.transform);
+                // GameEvents.OnPlayerClimb.Invoke(this.gameObject.transform);
             }
 
         }        
@@ -33,7 +33,7 @@ public class Ladder : MonoBehaviour
             
             if (_lockPlayerToLadder)
             {
-                GameEvents.OnPlayerStopClimb.Invoke(this.gameObject.transform);
+                // GameEvents.OnPlayerStopClimb.Invoke(this.gameObject.transform);
             }
 
         }  
