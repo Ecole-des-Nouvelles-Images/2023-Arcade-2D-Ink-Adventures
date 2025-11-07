@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace FSM
 {
-    public abstract class PlayerBaseState : MonoBehaviour
+    public abstract class PlayerBaseState
     {
         private bool _isRootState = false;
         private PlayerStateMachine _ctx;
         private PlayerStateFactory _factory;
         private PlayerBaseState _currentSuperState;
-        private PlayerBaseState _currentSubState;
+        public PlayerBaseState _currentSubState;
 
         public bool IsRootState { set => _isRootState = value; }
         protected PlayerStateMachine Ctx => _ctx;
@@ -28,7 +28,7 @@ namespace FSM
         public abstract void CheckSwitchStates();
         public abstract void InitiazeSubState();
 
-        private void UpdateStates()
+        public void UpdateStates()
         {
             UpdateState();
             if (_currentSubState != null)
@@ -37,7 +37,7 @@ namespace FSM
             }
         }
 
-        private void FixedUpdateStates()
+        public void FixedUpdateStates()
         {
             FixedUpdateState();
             if (_currentSubState != null)
@@ -54,7 +54,12 @@ namespace FSM
             {
                 _ctx.CurrentState = newState;
             }
+            else if (_currentSuperState != null)
+            {
+                _currentSuperState.SetSubState(newState);
+            }
         }
+
 
         private void SetSuperState(PlayerBaseState newSuperState)
         {
@@ -66,7 +71,6 @@ namespace FSM
             _currentSubState = newSubState;
             newSubState.SetSuperState(this);
         }
-
         public abstract void OnTriggerEnter2D(Collider2D other);
         public abstract void OnTriggerStay2D(Collider2D other);
         public abstract void OnTriggerExit2D(Collider2D other);

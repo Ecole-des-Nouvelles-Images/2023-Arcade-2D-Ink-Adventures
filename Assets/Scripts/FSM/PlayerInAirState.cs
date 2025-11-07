@@ -58,5 +58,10 @@ namespace FSM
         {
             throw new System.NotImplementedException();
         }
+
+        public void CheckSwitchSubStates()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

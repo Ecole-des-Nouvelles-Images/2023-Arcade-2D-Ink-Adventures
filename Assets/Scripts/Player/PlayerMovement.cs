@@ -77,15 +77,17 @@ namespace Player
             if (_isGrounded)
             {
                 Move(MovementStats.GroundAcceleration, MovementStats.GroundDeceleration, InputManager.Movement);
+                Debug.Log("Ground");
             }
 
-            if (_isClimbing)
+            else if (_isClimbing)
             {
                 Climb(MovementStats.LadderAcceleration, MovementStats.LadderDeceleration, InputManager.Movement);
             }
             else
             {
                 Move(MovementStats.AirAcceleration, MovementStats.AirDeceleration, InputManager.Movement);
+                Debug.Log("In Air");
             }
 
             _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
@@ -94,6 +96,7 @@ namespace Player
 
         private void Update()
         {
+
             CountTimers();
             JumpChecks();
             _animator.SetBool("isJumping", _isJumping);

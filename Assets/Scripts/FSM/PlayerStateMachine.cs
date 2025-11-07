@@ -1,4 +1,5 @@
 using System;
+using Input;
 using Player;
 using UnityEngine;
 
@@ -25,28 +26,35 @@ namespace FSM
         public Rigidbody2D Rb => _rb;
         public Vector2 MoveVelocity { get ; set; }
         public float CurrentSpeed { get; set; }
+        public float CurrentDeceleration { get; set; }
         public bool IsGrounded => _isGrounded;
         public PlayerBaseState CurrentState { get; set; }
 
         private void Awake()
         {
             _states = new PlayerStateFactory(this);
-            _currentState = _states.Grounded();
-            _currentState.EnterState();
 
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponentInChildren<Animator>();
         }
 
+        private void Start()
+        {
+            _currentState = _states.Grounded();
+            _currentState.EnterState();
+        }
+
         private void Update()
         {
-            _currentState.UpdateState();
+            _currentState.UpdateStates();
+            Debug.Log("Current State : " +_currentState);
+            Debug.Log("Current SubState : " +_currentState._currentSubState);
         }
 
         private void FixedUpdate()
         {
             CollisionChecks();
-            _currentState.FixedUpdateState();
+            _currentState.FixedUpdateStates();
 
             _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
             _animator.SetFloat("yVelocity", Math.Abs(_rb.velocity.y));

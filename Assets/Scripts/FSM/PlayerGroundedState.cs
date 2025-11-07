@@ -1,11 +1,11 @@
-using Input;
 using UnityEngine;
+using Input;
 
 namespace FSM
 {
-    public class PlayerGroundedState : PlayerBaseState, IRootState
+    public class PlayerGroundedState : PlayerBaseState
     {
-        public PlayerGroundedState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory) : base(currentContext, playerStateFactory)
+        public PlayerGroundedState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
         {
             IsRootState = true;
         }
@@ -22,7 +22,11 @@ namespace FSM
 
         public override void FixedUpdateState()
         {
+            if (_currentSubState == null) return;
+
             Move(Ctx.MovementStats.GroundAcceleration, Ctx.MovementStats.GroundDeceleration, InputManager.Movement);
+
+            _currentSubState.FixedUpdateStates();
         }
 
         public override void ExitState()
@@ -31,35 +35,25 @@ namespace FSM
 
         public override void CheckSwitchStates()
         {
+            /*
+            if (!Ctx.IsGrounded)
+            {
+                SwitchState(Factory.InAir());
+            }
+            */
         }
 
         public override void InitiazeSubState()
         {
             if (InputManager.Movement.magnitude == 0)
-            {
                 SetSubState(Factory.Idle());
-            }
             else
-            {
                 SetSubState(Factory.Walk());
-            }
         }
 
-        public override void OnTriggerEnter2D(Collider2D other)
-        {
-        }
-
-        public override void OnTriggerStay2D(Collider2D other)
-        {
-        }
-
-        public override void OnTriggerExit2D(Collider2D other)
-        {
-        }
-
-        public void HandleGravity()
-        {
-        }
+        public override void OnTriggerEnter2D(Collider2D other) { }
+        public override void OnTriggerStay2D(Collider2D other) { }
+        public override void OnTriggerExit2D(Collider2D other) { }
 
         private void Move(float acceleration, float deceleration, Vector2 moveInput)
         {
