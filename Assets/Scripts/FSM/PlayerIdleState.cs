@@ -9,15 +9,11 @@ namespace FSM
 
         public override void EnterState()
         {
-            Debug.Log("Entering Idle State");
         }
 
         public override void UpdateState()
         {
             CheckSwitchStates();
-
-            Debug.Log("Updating Idle State");
-
         }
 
         public override void FixedUpdateState() { }
@@ -28,7 +24,6 @@ namespace FSM
         {
             if (InputManager.Movement.magnitude > 0)
             {
-                Debug.Log("test");
                 SwitchState(Factory.Walk());
             }
         }

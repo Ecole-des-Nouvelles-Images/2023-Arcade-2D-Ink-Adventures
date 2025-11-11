@@ -9,15 +9,11 @@ namespace FSM
 
         public override void EnterState()
         {
-            Debug.Log("Entering Walk State");
         }
 
         public override void UpdateState()
         {
             CheckSwitchStates();
-
-            Debug.Log("Updating Walk State");
-
         }
 
         public override void FixedUpdateState() { }

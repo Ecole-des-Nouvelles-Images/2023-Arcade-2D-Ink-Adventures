@@ -40,6 +40,7 @@ namespace FSM
 
         private void Start()
         {
+            _isFacingRight = true;
             _currentState = _states.Grounded();
             _currentState.EnterState();
         }
@@ -48,7 +49,7 @@ namespace FSM
         {
             _currentState.UpdateStates();
             Debug.Log("Current State : " +_currentState);
-            Debug.Log("Current SubState : " +_currentState._currentSubState);
+            // Debug.Log("Current SubState : " +_currentState._currentSubState);
         }
 
         private void FixedUpdate()
@@ -117,26 +118,23 @@ namespace FSM
             if (_isFacingRight && moveInput.x < 0)
             {
                 Turn(false);
+                Debug.Log("Facing Right");
             }
 
             else if (!_isFacingRight && moveInput.x > 0)
             {
                 Turn(true);
+                Debug.Log("Facing Left");
             }
         }
 
         private void Turn(bool turnRight)
         {
-            if (turnRight)
-            {
-                _isFacingRight = true;
-                transform.Rotate(0f, 180f, 0f);
-            }
-            else
-            {
-                _isFacingRight = false;
-                transform.Rotate(0f, -180f, 0f);
-            }
+            _isFacingRight = turnRight;
+
+            Vector3 localScale = transform.localScale;
+            localScale.x = Mathf.Abs(localScale.x) * (turnRight ? 1 : -1);
+            transform.localScale = localScale;
         }
     }
 }
