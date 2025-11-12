@@ -96,7 +96,6 @@ namespace Player
 
         private void Update()
         {
-
             CountTimers();
             JumpChecks();
             _animator.SetBool("isJumping", _isJumping);

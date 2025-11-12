@@ -9,7 +9,9 @@ namespace FSM
         idle,
         walk,
         air,
-        jump
+        jump,
+        fall,
+        test
     }
     public class PlayerStateFactory
     {
@@ -22,6 +24,10 @@ namespace FSM
            _states[PlayerStates.idle] = new PlayerIdleState(_context, this);
            _states[PlayerStates.walk] = new PlayerWalkState(_context, this);
            _states[PlayerStates.air] = new PlayerInAirState(_context, this);
+           _states[PlayerStates.jump] = new PlayerJumpState(_context, this);
+           _states[PlayerStates.fall] = new PlayerFallState(_context, this);
+           _states[PlayerStates.test] = new PlayerTestState(_context, this);
+
         }
 
         public PlayerBaseState Grounded()
@@ -42,6 +48,21 @@ namespace FSM
         public PlayerBaseState InAir()
         {
             return _states[PlayerStates.air];
+        }
+
+        public PlayerBaseState Jump()
+        {
+            return _states[PlayerStates.jump];
+        }
+
+        public PlayerBaseState Fall()
+        {
+            return _states[PlayerStates.fall];
+        }
+
+        public PlayerBaseState Test()
+        {
+            return _states[PlayerStates.test];
         }
     }
 }

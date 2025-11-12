@@ -26,7 +26,7 @@ namespace FSM
         public abstract void FixedUpdateState();
         public abstract void ExitState();
         public abstract void CheckSwitchStates();
-        public abstract void InitiazeSubState();
+        public abstract void InitializeSubState();
 
         public void UpdateStates()
         {

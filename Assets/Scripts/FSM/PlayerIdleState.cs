@@ -3,9 +3,12 @@ using Input;
 
 namespace FSM
 {
-    public class PlayerIdleState : PlayerBaseState
+    public class PlayerIdleState : PlayerGroundedState
     {
-        public PlayerIdleState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory) { }
+        public PlayerIdleState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
+        {
+            IsRootState = false;
+        }
 
         public override void EnterState()
         {
@@ -28,9 +31,7 @@ namespace FSM
             }
         }
 
-        public override void InitiazeSubState() { }
-
-
+        public override void InitializeSubState() { }
         public override void OnTriggerEnter2D(Collider2D other) { }
         public override void OnTriggerStay2D(Collider2D other) { }
         public override void OnTriggerExit2D(Collider2D other) { }

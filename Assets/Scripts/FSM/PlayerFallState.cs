@@ -1,17 +1,14 @@
 using UnityEngine;
-using Input;
 
 namespace FSM
 {
-    public class PlayerWalkState : PlayerGroundedState
+    public class PlayerFallState : PlayerInAirState
     {
-        public PlayerWalkState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
-        {
-            IsRootState = false;
-        }
+        public PlayerFallState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory) { }
 
         public override void EnterState()
         {
+            IsFalling = true;
         }
 
         public override void UpdateState()
@@ -19,14 +16,17 @@ namespace FSM
             CheckSwitchStates();
         }
 
-        public override void FixedUpdateState() { }
+        public override void FixedUpdateState()
+        {
+        }
 
-        public override void ExitState() { }
+        public override void ExitState()
+        {
+            IsFalling = false;
+        }
 
         public override void CheckSwitchStates()
         {
-            if (InputManager.Movement.magnitude == 0)
-                SwitchState(Factory.Idle());
         }
 
         public override void InitializeSubState() { }

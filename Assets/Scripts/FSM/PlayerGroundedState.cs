@@ -3,7 +3,7 @@ using Input;
 
 namespace FSM
 {
-    public class PlayerGroundedState : PlayerBaseState
+    public class PlayerGroundedState : PlayerBaseState, IRootState
     {
         public PlayerGroundedState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
         {
@@ -12,7 +12,7 @@ namespace FSM
 
         public override void EnterState()
         {
-            InitiazeSubState();
+            InitializeSubState();
         }
 
         public override void UpdateState()
@@ -35,15 +35,21 @@ namespace FSM
 
         public override void CheckSwitchStates()
         {
-            /*
+            Debug.Log("Ready to switch from Grounded State");
             if (!Ctx.IsGrounded)
             {
                 SwitchState(Factory.InAir());
             }
-            */
+
+            if (InputManager.BlueLightButtonWasPressed)
+            {
+                Debug.Log("Switching to Test State");
+                SwitchState(Factory.Test());
+            }
         }
 
-        public override void InitiazeSubState()
+
+        public override void InitializeSubState()
         {
             if (InputManager.Movement.magnitude == 0)
                 SetSubState(Factory.Idle());
@@ -73,5 +79,8 @@ namespace FSM
             }
         }
 
+        public void HandleGravity()
+        {
+        }
     }
 }

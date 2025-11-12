@@ -7,7 +7,6 @@ namespace FSM
 {
     public class PlayerStateMachine : MonoBehaviour
     {
-        private PlayerBaseState _currentState;
         private PlayerStateFactory _states;
 
         [Header("References")]
@@ -15,13 +14,14 @@ namespace FSM
         [SerializeField] private Collider2D _feetCollider;
         [SerializeField] private Collider2D _bodyCollider;
 
-
-
         private Rigidbody2D _rb;
         private Animator _animator;
         private bool _isGrounded;
         private RaycastHit2D _groundHit;
         private bool _isFacingRight;
+        private RaycastHit2D _headHit;
+        private bool _bumpedHead;
+        public bool BumpedHead => _bumpedHead;
 
         public Rigidbody2D Rb => _rb;
         public Vector2 MoveVelocity { get ; set; }
@@ -41,21 +41,21 @@ namespace FSM
         private void Start()
         {
             _isFacingRight = true;
-            _currentState = _states.Grounded();
-            _currentState.EnterState();
+            CurrentState = _states.Grounded();
+            CurrentState.EnterState();
         }
 
         private void Update()
         {
-            _currentState.UpdateStates();
-            Debug.Log("Current State : " +_currentState);
-            // Debug.Log("Current SubState : " +_currentState._currentSubState);
+            CurrentState.UpdateStates();
+            Debug.Log("Current State : " +CurrentState);
+            Debug.Log("Current SubState : " +CurrentState._currentSubState);
         }
 
         private void FixedUpdate()
         {
             CollisionChecks();
-            _currentState.FixedUpdateStates();
+            CurrentState.FixedUpdateStates();
 
             _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
             _animator.SetFloat("yVelocity", Math.Abs(_rb.velocity.y));
@@ -64,7 +64,10 @@ namespace FSM
         private void CollisionChecks()
         {
             HandleGroundCheck();
+            HandleBumpedHeadCheck();
         }
+
+        #region Collision Checks
 
         private void HandleGroundCheck()
         {
@@ -113,18 +116,135 @@ namespace FSM
             #endregion
         }
 
+        private void HandleBumpedHeadCheck()
+        {
+            // Ajustez l'origine du BoxCast pour qu'il soit au sommet de la tête
+            Vector2 boxCastOrigin = new Vector2(_bodyCollider.bounds.center.x, _bodyCollider.bounds.max.y);
+
+            // Ajustez la taille du BoxCast pour correspondre à la largeur de la tête
+            Vector2 boxCastSize = new Vector2(_bodyCollider.bounds.size.x * MovementStats.HeadWidth,
+                MovementStats.HeadDetectionRayLength);
+
+            _headHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.up,
+                MovementStats.HeadDetectionRayLength, MovementStats.GroundLayer);
+
+            if (_headHit.collider != null)
+            {
+                _bumpedHead = true;
+            }
+            else
+            {
+                _bumpedHead = false;
+            }
+
+            #region Debug Visualization
+
+            if (MovementStats.DebugShowHeadBumpBox)
+            {
+                float headWidth = MovementStats.HeadWidth;
+                Color rayColor = _bumpedHead ? Color.green : Color.red;
+
+                // Dessinez les lignes de débogage pour visualiser la boîte de détection
+                Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth, boxCastOrigin.y),
+                    Vector2.up * MovementStats.HeadDetectionRayLength, rayColor);
+                Debug.DrawRay(new Vector2(boxCastOrigin.x + (boxCastSize.x / 2) * headWidth, boxCastOrigin.y),
+                    Vector2.up * MovementStats.HeadDetectionRayLength, rayColor);
+                Debug.DrawRay(
+                    new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth,
+                        boxCastOrigin.y + MovementStats.HeadDetectionRayLength),
+                    Vector2.right * boxCastSize.x * headWidth, rayColor);
+            }
+
+            #endregion
+        }
+
+        private void DrawJumpArc(float moveSpeed, Color gizmoColor)
+        {
+            Vector2 startPosition = new Vector2(_feetCollider.bounds.center.x, _feetCollider.bounds.min.y);
+            Vector2 previousPosition = startPosition;
+            float speed = 0f;
+            if (MovementStats.DrawRight)
+            {
+                speed = moveSpeed;
+            }
+            else
+            {
+                speed = -moveSpeed;
+            }
+
+            Vector2 velocity = new Vector2(speed, MovementStats.InitialJumpVelocity);
+
+            Gizmos.color = gizmoColor;
+
+            float timeStep = 2 * MovementStats.TimeTillJumpApex / MovementStats.ArcResolution;
+
+            for (int i = 0; i < MovementStats.VisualizationSteps; i++)
+            {
+                float simulationTime = i * timeStep;
+                Vector2 displacement;
+                Vector2 drawPoint;
+
+                if (simulationTime < MovementStats.TimeTillJumpApex)
+                {
+                    displacement = velocity * simulationTime +
+                                   0.5f * new Vector2(0, MovementStats.Gravity) * simulationTime * simulationTime;
+                }
+                else if (simulationTime < MovementStats.TimeTillJumpApex + MovementStats.ApexHangTime)
+                {
+                    float apexTime = simulationTime - MovementStats.TimeTillJumpApex;
+                    displacement = velocity * MovementStats.TimeTillJumpApex + 0.5f *
+                        new Vector2(0, MovementStats.Gravity) * MovementStats.TimeTillJumpApex *
+                        MovementStats.TimeTillJumpApex;
+                    displacement += new Vector2(speed, 0) * apexTime;
+                }
+                else
+                {
+                    float descendTime =
+                        simulationTime - (MovementStats.TimeTillJumpApex + MovementStats.ApexHangTime);
+                    displacement = velocity * MovementStats.TimeTillJumpApex + 0.5f *
+                        new Vector2(0, MovementStats.Gravity) * MovementStats.TimeTillJumpApex *
+                        MovementStats.TimeTillJumpApex;
+                    displacement += new Vector2(speed, 0) * MovementStats.ApexHangTime;
+                    displacement += new Vector2(speed, 0) * descendTime +
+                                    0.5f * new Vector2(0, MovementStats.Gravity) * descendTime * descendTime;
+                }
+
+                drawPoint = startPosition + displacement;
+
+                if (MovementStats.StopOnCollision)
+                {
+                    RaycastHit2D hit = Physics2D.Raycast(previousPosition, drawPoint - previousPosition,
+                        Vector2.Distance(drawPoint, previousPosition), MovementStats.GroundLayer);
+                    if (hit.collider != null)
+                    {
+                        Gizmos.DrawLine(previousPosition, hit.point);
+                        break;
+                    }
+                }
+
+                Gizmos.DrawLine(previousPosition, drawPoint);
+                previousPosition = drawPoint;
+            }
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (MovementStats.ShowWalkJumpArc)
+            {
+                DrawJumpArc(MovementStats.MaxWalkSpeed, Color.white);
+            }
+        }
+
         public void TurnCheck(Vector2 moveInput)
         {
             if (_isFacingRight && moveInput.x < 0)
             {
                 Turn(false);
-                Debug.Log("Facing Right");
             }
 
             else if (!_isFacingRight && moveInput.x > 0)
             {
                 Turn(true);
-                Debug.Log("Facing Left");
             }
         }
 
@@ -136,5 +256,6 @@ namespace FSM
             localScale.x = Mathf.Abs(localScale.x) * (turnRight ? 1 : -1);
             transform.localScale = localScale;
         }
+        #endregion
     }
 }
