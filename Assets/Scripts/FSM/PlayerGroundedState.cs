@@ -35,15 +35,15 @@ namespace FSM
 
         public override void CheckSwitchStates()
         {
-            Debug.Log("Ready to switch from Grounded State");
-            if (!Ctx.IsGrounded)
+            if (InputManager.JumpWasPressed && (Ctx.IsGrounded || Ctx.CoyoteTime > 0f))
             {
                 SwitchState(Factory.InAir());
+                return;
             }
+
 
             if (InputManager.BlueLightButtonWasPressed)
             {
-                Debug.Log("Switching to Test State");
                 SwitchState(Factory.Test());
             }
         }

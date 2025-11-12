@@ -39,23 +39,28 @@ namespace FSM
             Debug.Log("IsFalling = " +IsFalling);
             Debug.Log("IsFastFalling = " +IsFastFalling);
 
+
+            HandleJumpBuffer();
+            HandleCoyoteTime();
+
             CheckSwitchStates();
         }
 
         public override void FixedUpdateState()
         {
             if (_currentSubState == null) return;
-
+            HandleGravity();
             Move(Ctx.MovementStats.AirAcceleration, Ctx.MovementStats.AirDeceleration, InputManager.Movement);
-
             _currentSubState.FixedUpdateStates();
-
-            // HandleGravity();
         }
 
         public override void ExitState()
         {
-            throw new System.NotImplementedException();
+            IsJumping = false;
+            IsFalling = false;
+            IsFastFalling = false;
+            _numberOfJumpsUsed = 0;
+            Ctx.CoyoteTime = 0f;
         }
 
         public override void CheckSwitchStates()
@@ -69,6 +74,14 @@ namespace FSM
 
         public override void InitializeSubState()
         {
+            if (InputManager.JumpWasPressed)
+            {
+                SetSubState(Factory.Jump());
+            }
+            else
+            {
+                SetSubState(Factory.Fall());
+            }
         }
 
         public override void OnTriggerEnter2D(Collider2D other)
@@ -117,7 +130,115 @@ namespace FSM
 
         public void HandleGravity()
         {
-            throw new System.NotImplementedException();
+            if (IsJumping)
+            {
+                if (Ctx.BumpedHead)
+                {
+                    IsFastFalling = true;
+                }
+
+                if (VerticalVelocity >= 0f)
+                {
+                    _apexPoint = Mathf.InverseLerp(Ctx.MovementStats.InitialJumpVelocity, 0f, VerticalVelocity);
+
+                    if (_apexPoint > Ctx.MovementStats.ApexThreshold)
+                    {
+                        if (!_isPastApexThreshold)
+                        {
+                            _isPastApexThreshold = true;
+                            _timePastApexThreshold = 0f;
+                        }
+
+                        if (_isPastApexThreshold)
+                        {
+                            _timePastApexThreshold += Time.fixedDeltaTime;
+                            if (_timePastApexThreshold < Ctx.MovementStats.ApexHangTime)
+                            {
+                                VerticalVelocity = 0f;
+                            }
+                            else
+                            {
+                                VerticalVelocity = -0.01f;
+                            }
+                        }
+                    }
+
+                    // GRAVITY ON ASCENDING NOT PAST APEX THRESHOLD
+                    else
+                    {
+                        VerticalVelocity += Ctx.MovementStats.Gravity * Time.fixedDeltaTime;
+                        if (_isPastApexThreshold)
+                        {
+                            _isPastApexThreshold = false;
+                        }
+                    }
+                }
+
+                // GRAVITY ON DESCENDING
+                else if (!IsFastFalling)
+                {
+                    VerticalVelocity += Ctx.MovementStats.Gravity * Ctx.MovementStats.GravityOnReleaseMultiplier *
+                                        Time.fixedDeltaTime;
+                }
+                else if (VerticalVelocity < 0)
+                {
+                    if (!IsFalling)
+                    {
+                        IsFalling = true;
+                    }
+                }
+            }
+
+            // JUMP CUT
+            if (IsFastFalling)
+            {
+                if (_fastFallTime >= Ctx.MovementStats.TimeForUpwardsCancel)
+                {
+                    VerticalVelocity += Ctx.MovementStats.Gravity * Ctx.MovementStats.GravityOnReleaseMultiplier *
+                                        Time.fixedDeltaTime;
+                }
+                else if (_fastFallTime < Ctx.MovementStats.TimeForUpwardsCancel)
+                {
+                    VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f,
+                        (_fastFallTime / Ctx.MovementStats.TimeForUpwardsCancel));
+                }
+
+                _fastFallTime += Time.fixedDeltaTime;
+            }
+
+            if (!Ctx.IsGrounded && !IsJumping)
+            {
+                if (!IsFastFalling)
+                {
+                    IsFalling = true;
+                }
+
+                VerticalVelocity += Ctx.MovementStats.Gravity * Time.fixedDeltaTime;
+            }
+
+            VerticalVelocity = Mathf.Clamp(VerticalVelocity, -Ctx.MovementStats.MaxFallSpeed, 50f);
+
+            Ctx.Rb.velocity = new Vector2(Ctx.Rb.velocity.x, VerticalVelocity);        }
+
+        private void HandleJumpBuffer()
+        {
+            if (InputManager.JumpWasPressed)
+            {
+                _jumpBufferTimer = Ctx.MovementStats.JumpBufferTime;
+                _jumpReleasedDuringBuffer = false;
+            }
+
+            _jumpBufferTimer -= Time.deltaTime;
         }
+
+        private void HandleCoyoteTime()
+        {
+            if (!Ctx.IsGrounded)
+                _coyoteTimer -= Time.deltaTime;
+            else
+                _coyoteTimer = Ctx.MovementStats.JumpCoyoteTime;
+        }
+
+
     }
 }

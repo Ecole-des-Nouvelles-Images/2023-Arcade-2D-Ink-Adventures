@@ -6,6 +6,7 @@ namespace FSM
     {
         public PlayerJumpState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
         {
+            IsRootState = false;
         }
 
         public override void EnterState()
@@ -31,6 +32,10 @@ namespace FSM
 
         public override void CheckSwitchStates()
         {
+            if (VerticalVelocity <= 0f)
+            {
+                SwitchState(Factory.Fall());
+            }
         }
 
         public override void InitializeSubState() { }

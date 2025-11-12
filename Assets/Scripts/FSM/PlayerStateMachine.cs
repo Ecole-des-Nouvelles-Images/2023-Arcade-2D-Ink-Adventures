@@ -23,6 +23,7 @@ namespace FSM
         private bool _bumpedHead;
         public bool BumpedHead => _bumpedHead;
 
+        public float CoyoteTime { get; set; }
         public Rigidbody2D Rb => _rb;
         public Vector2 MoveVelocity { get ; set; }
         public float CurrentSpeed { get; set; }
