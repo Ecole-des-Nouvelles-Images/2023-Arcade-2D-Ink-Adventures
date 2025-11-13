@@ -15,7 +15,7 @@ namespace FSM
         protected PlayerStateMachine Ctx => _ctx;
         protected PlayerStateFactory Factory => _factory;
 
-        public PlayerBaseState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
+        protected PlayerBaseState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         {
             _ctx = currentContext;
             _factory = playerStateFactory;
@@ -27,6 +27,15 @@ namespace FSM
         public abstract void ExitState();
         public abstract void CheckSwitchStates();
         public abstract void InitializeSubState();
+
+        private void EnterStates()
+        {
+            EnterState();
+            if (_currentSubState != null)
+            {
+                _currentSubState.EnterStates();
+            }
+        }
 
         public void UpdateStates()
         {
@@ -49,7 +58,7 @@ namespace FSM
         protected void SwitchState(PlayerBaseState newState)
         {
             ExitState();
-            newState.EnterState();
+            newState.EnterStates();
             if (_isRootState)
             {
                 _ctx.CurrentState = newState;
@@ -71,9 +80,9 @@ namespace FSM
             _currentSubState = newSubState;
             newSubState.SetSuperState(this);
         }
-        public abstract void OnTriggerEnter2D(Collider2D other);
-        public abstract void OnTriggerStay2D(Collider2D other);
-        public abstract void OnTriggerExit2D(Collider2D other);
+        public virtual void OnTriggerEnter2D(Collider2D other){}
+        public virtual void OnTriggerStay2D(Collider2D other){}
+        public virtual void OnTriggerExit2D(Collider2D other){}
 
     }
 }

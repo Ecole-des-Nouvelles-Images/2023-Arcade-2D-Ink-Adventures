@@ -25,7 +25,7 @@ namespace FSM
            _states[PlayerStates.walk] = new PlayerWalkState(_context, this);
            _states[PlayerStates.air] = new PlayerInAirState(_context, this);
            _states[PlayerStates.jump] = new PlayerJumpState(_context, this);
-           _states[PlayerStates.fall] = new PlayerFallState(_context, this);
+           _states[PlayerStates.fall] = new PlayerFastFallState(_context, this);
            _states[PlayerStates.test] = new PlayerTestState(_context, this);
 
         }

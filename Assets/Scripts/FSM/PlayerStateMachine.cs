@@ -56,7 +56,7 @@ namespace FSM
         private void FixedUpdate()
         {
             CollisionChecks();
-            CurrentState.FixedUpdateStates();
+            CurrentState.FixedUpdateState();
 
             _animator.SetFloat("xVelocity", Math.Abs(_rb.velocity.x));
             _animator.SetFloat("yVelocity", Math.Abs(_rb.velocity.y));
@@ -66,6 +66,24 @@ namespace FSM
         {
             HandleGroundCheck();
             HandleBumpedHeadCheck();
+        }
+
+        public void Move(float acceleration, float deceleration, Vector2 moveInput)
+        {
+            if (moveInput != Vector2.zero)
+            {
+                TurnCheck(moveInput);
+                Vector2 targetVelocity = Vector2.zero;
+                targetVelocity = new Vector2(moveInput.x, 0f) * MovementStats.MaxWalkSpeed;
+
+                MoveVelocity = Vector2.Lerp(MoveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+                Rb.velocity = new Vector2(MoveVelocity.x, Rb.velocity.y);
+            }
+            else if (moveInput == Vector2.zero)
+            {
+                MoveVelocity = Vector2.Lerp(MoveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+                Rb.velocity = new Vector2(MoveVelocity.x, Rb.velocity.y);
+            }
         }
 
         #region Collision Checks

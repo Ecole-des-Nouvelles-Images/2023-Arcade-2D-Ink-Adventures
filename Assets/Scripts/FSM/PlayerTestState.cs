@@ -1,54 +1,37 @@
 using UnityEngine;
+using Input;
 
 namespace FSM
 {
-    public class PlayerTestState : PlayerBaseState, IRootState
+    public class PlayerTestState : PlayerBaseState
     {
-        public PlayerTestState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory) : base(currentContext, playerStateFactory)
+        public PlayerTestState(PlayerStateMachine ctx, PlayerStateFactory factory) : base(ctx, factory)
         {
-            IsRootState = true;
         }
 
         public override void EnterState()
         {
-            Debug.Log("Enter Test State");
+            Debug.Log("Entering Test State");
         }
 
         public override void UpdateState()
         {
-            Debug.Log("Update Test State");
+            Debug.Log("Updating Test State");
         }
 
         public override void FixedUpdateState()
         {
         }
 
-        public override void ExitState()
-        {
-        }
+        public override void ExitState() { }
 
         public override void CheckSwitchStates()
         {
         }
 
-        public override void InitializeSubState()
-        {
-        }
-
-        public override void OnTriggerEnter2D(Collider2D other)
-        {
-        }
-
-        public override void OnTriggerStay2D(Collider2D other)
-        {
-        }
-
-        public override void OnTriggerExit2D(Collider2D other)
-        {
-        }
-
-        public void HandleGravity()
-        {
-        }
+        public override void InitializeSubState() { }
+        public override void OnTriggerEnter2D(Collider2D other) { }
+        public override void OnTriggerStay2D(Collider2D other) { }
+        public override void OnTriggerExit2D(Collider2D other) { }
     }
 }

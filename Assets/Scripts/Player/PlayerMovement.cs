@@ -99,6 +99,7 @@ namespace Player
             CountTimers();
             JumpChecks();
             _animator.SetBool("isJumping", _isJumping);
+            Debug.Log("Is Jumping: " + _isJumping);
         }
 
         #region Movement

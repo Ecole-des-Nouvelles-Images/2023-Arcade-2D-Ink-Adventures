@@ -12,6 +12,7 @@ namespace FSM
 
         public override void EnterState()
         {
+            Debug.Log("Entering Idle State");
         }
 
         public override void UpdateState()
@@ -19,7 +20,9 @@ namespace FSM
             CheckSwitchStates();
         }
 
-        public override void FixedUpdateState() { }
+        public override void FixedUpdateState()
+        {
+        }
 
         public override void ExitState() { }
 
